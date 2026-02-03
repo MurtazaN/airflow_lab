@@ -1,185 +1,104 @@
-A comprehensive guide to setting up, deploying, and triggering Apache Airflow DAGs on a virtual machine (VM). This walkthrough covers creating an Airflow environment, configuring the API, structuring folders, and setting up DAGs to run a sample Python script with email notifications.
+# Airflow Lab Instructions and Description
 
----
+## Introduction
+This document provides a detailed breakdown of the two DAGs (`Airflow_Lab2` and `Airflow_Lab2_Flask`) along with explanations of each function within the DAG files. These explanations aim to clarify the purpose and functionality of each task and function in the Airflow workflows.
 
-## Step-by-Step Guide: Deploying and Triggering Airflow DAGs on a VM
 
-### 1. Create and Configure a VM
-1. **Create a Virtual Machine Instance**:
-   - Log in to your cloud provider and create a new VM instance with sufficient resources (e.g., 2 vCPUs, 4GB RAM) to handle Airflow.
+Watch the tutorial video for this lab at [Airflow Lab2 Tutorial Video](https://youtu.be/LwBFOyfN5TY)
 
-2. **Set Up Networking**:
-   - Go to **VPC Network** and add a firewall rule to allow HTTP (port 80) and custom Airflow webserver port (e.g., port 8080).
+## Prerequisites
+Before proceeding with this lab, ensure the following prerequisites are met:
 
----
+- Basic understanding of Apache Airflow concepts.
+- Apache Airflow installed and configured.
+- Necessary Python packages installed, including Flask.
 
-### 2. Update and Install Necessary Packages
-After the VM is set up, SSH into it and update the system, then install necessary packages:
-```bash
-sudo apt update
-sudo apt install python3-pip python3-venv python3-full -y
-```
 
-### 3. Set Up a Virtual Environment for Airflow
-1. **Create a Virtual Environment**:
-   ```bash
-   python3 -m venv airflow_new_venv
-   ```
+## Airflow Email Configuration
 
-2. **Activate the Virtual Environment**:
-   ```bash
-   source airflow_new_venv/bin/activate
-   ```
+### Sign in with app passwords
+Follow the instruction provided here: [link](https://support.google.com/accounts/answer/185833) and get your smtp password
 
-3. **Install Apache Airflow**:
-   ```bash
-   pip install apache-airflow
-   ```
+### Adding SMTP Information to airflow.cfg
 
-4. **Initialize the Airflow Database**:
-   ```bash
-   airflow db init
-   ```
+To configure Airflow to send emails, you need to add SMTP information to the `airflow.cfg` file. Follow these steps:
 
----
+1. Locate the `airflow.cfg` file in your Airflow installation directory.
+2. Open the file using a text editor.
+3. Search for the `[smtp]` section in the configuration file.
+4. Update the following parameters with your SMTP server information:
+   - `smtp_host`: Hostname of the SMTP server.
+   - `smtp_starttls`: Set it to `True` if your SMTP server uses TLS.
+   - `smtp_ssl`: Set it to `True` if your SMTP server uses SSL.
+   - `smtp_user`: Your SMTP username.
+   - `smtp_password`: Your SMTP password.
+   - `smtp_port`: Port number of the SMTP server (e.g., 587 for TLS, 465 for SSL).
+5. Save the changes to the `airflow.cfg` file.
 
-### 4. Start the Airflow Webserver and Scheduler
-To start Airflow, open two separate terminals and activate the virtual environment in each:
+for our lab assuming you have a gmail account you can use the following setting:
+   - smtp_host = smtp.gmail.com
+   - smtp_starttls = True
+   - smtp_ssl = False
+   - smtp_user = YOUREMAIL@gmail.com
+   - smtp_password = Enter your password generated above
+   - smtp_port = 587
+   - smtp_mail_from = YOUREMAIL@gmail.com
+   - smtp_timeout = 30
+   - smtp_retry_limit = 5
 
-1. **Terminal 1**: Start the Webserver
-   ```bash
-   source airflow_new_venv/bin/activate
-   airflow webserver --port 8080
-   ```
+After updating the SMTP information, Airflow will use the configured SMTP server to send email notifications.
 
-2. **Terminal 2**: Start the Scheduler
-   ```bash
-   source airflow_new_venv/bin/activate
-   airflow scheduler
-   ```
 
-The Airflow web interface should now be accessible at `http://<VM-IP>:8080`.
+## DAG Structure
 
----
+### `Airflow_Lab2`
+This DAG orchestrates a machine learning pipeline and notification system. Let's break down each function within this DAG:
 
-### 5. Enable the Airflow API
-To enable the Airflow API, configure the `airflow.cfg` file:
-1. Open the `airflow.cfg` file for editing:
-   ```bash
-   nano ~/airflow/airflow.cfg
-   ```
-2. Locate the `[api]` section and modify it to enable the API:
-   ```ini
-   [api]
-   auth_backend = airflow.api.auth.backend.basic_auth
-   ```
+1. **`notify_success(context)` and `notify_failure(context)` Functions:**
+   - These functions define email notifications for task success and failure, respectively. They utilize the `EmailOperator` to send emails with predefined content and subject to a specified recipient (in this case, `rey.mhmmd@gmail.com`).
 
-### 6. Create an Airflow Admin User
-To authenticate with the API, create a user:
-```bash
-airflow users create \
-  --username yourusername \
-  --firstname yourname \
-  --lastname yourname \
-  --role Admin \
-  --email youremail
-```
+2. **`default_args` Dictionary:**
+   - This dictionary defines default arguments for the DAG, including the start date and the number of retries in case of task failure.
 
----
+3. **`dag` Definition:**
+   - This section creates the main DAG instance (`Airflow_Lab2`) with various parameters such as description, schedule interval, catchup behavior, and tags.
+   
+4. **`owner_task` BashOperator:**
+   - This task echoes `1` and is assigned to an owner (`Ramin Mohammadi`). It represents a simple demonstration task with a linked owner.
 
-### 7. Set Up Folder Structure for Airflow Project
-1. In your Airflow directory, create folders for DAGs and requirements:
-   ```bash
-   mkdir dags
-   mkdir dags/src
-   touch requirements.txt
-   ```
+5. **`send_email` EmailOperator:**
+   - This task sends a notification email upon DAG completion. It utilizes the `notify_success` and `notify_failure` functions as callbacks for success and failure, respectively.
 
-2. **Add Python Scripts for DAGs**:
-   - Place your DAG Python script, `my_dag.py`, in the `dags` folder.
-   - Place other required scripts, like `model_development.py` and `success_email.py`, in the `dags/src` folder.
+6. **PythonOperator Tasks:**
+   - These tasks execute Python functions (`load_data`, `data_preprocessing`, `separate_data_outputs`, `build_model`, `load_model`) representing different stages of a machine learning pipeline. They perform data loading, preprocessing, model building, and model loading tasks.
 
-   Example structure:
-   ```plaintext
-   airflow/
-   ├── dags/
-   │   ├── my_dag.py
-   │   └── src/
-   │       ├── model_development.py
-   │       └── success_email.py
-   └── requirements.txt
-   ```
+7. **`TriggerDagRunOperator` Task:**
+   - This task triggers the `Airflow_Lab2_Flask` DAG upon successful completion of the main DAG. It ensures that the Flask API is launched after the machine learning pipeline completes successfully.
 
----
+### `Airflow_Lab2_Flask`
+This DAG manages the Flask API's lifecycle and consists of the following function:
 
-### 8. Create and Edit DAG Files
+1. **`check_dag_status()` Function:**
+   - This function queries the status of the last DAG run (`Airflow_Lab2`). It returns `True` if the DAG run was successful, and `False` otherwise.
 
-1. **Define DAG**:
-   Create and edit the `my_dag.py` DAG file:
-   ```bash
-   nano dags/my_dag.py
-   ```
+2. **`handle_api_request()` Function:**
+   - This function handles API requests and redirects users to `/success` or `/failure` routes based on the status of the last DAG run.
 
-   Sample `my_dag.py` content:
-   ```python
-   Code added in files
-   ```
+3. **Flask Routes and HTML Templates:**
+   - The Flask routes (`/api`, `/success`, `/failure`) define endpoints for accessing the API and displaying success or failure pages. These routes render HTML templates (`success.html`, `failure.html`) with appropriate messages.
 
-2. **Additional Python Scripts**:
-   Edit and add any additional scripts required, such as `model_development.py` and `success_email.py`.
+4. **`start_flask_app()` Function:**
+   - This function starts the Flask server, enabling users to access the API endpoints.
 
----
+5. **`start_flask_API` PythonOperator:**
+   - This task executes the `start_flask_app()` function to initiate the Flask server. It represents the starting point for the Flask API's lifecycle.
 
-### 9. Install Requirements
-If you have any specific Python packages listed in `requirements.txt`, install them with:
-```bash
-pip install -r requirements.txt
-```
+## Conclusion
+In this project, we've constructed a robust workflow using Apache Airflow to orchestrate a machine learning pipeline and manage a Flask API for monitoring purposes. The Airflow_Lab2 DAG coordinates various tasks, including data loading, preprocessing, model building, and email notification upon completion. By leveraging PythonOperators and BashOperator, we've encapsulated each step of the machine learning process, allowing for easy scalability and maintenance.
 
----
+Additionally, the integration of email notifications enhances the workflow's visibility, providing stakeholders with timely updates on task success or failure. This ensures proactive monitoring and quick response to any issues that may arise during pipeline execution.
 
-### 10. Trigger the DAG
-1. **Activate the Virtual Environment**:
-   ```bash
-   source airflow_new_venv/bin/activate
-   ```
+Furthermore, the Airflow_Lab2_Flask DAG facilitates the management of a Flask API, enabling users to access endpoints for checking the status of the machine learning pipeline. By querying the last DAG run status, the API delivers real-time feedback, empowering users to make informed decisions based on the pipeline's performance.
 
-2. **Trigger the DAG Manually**:
-   ```bash
-   airflow dags trigger sample_dag
-   ```
+Overall, this project demonstrates the power of Apache Airflow in orchestrating complex workflows and integrating external systems seamlessly. By following the provided instructions and understanding the workflow's structure, users can leverage Airflow to streamline their machine learning pipelines and enhance operational efficiency.
 
-You should see logs confirming that the DAG `sample_dag` has been triggered. You can also monitor the DAG execution on the Airflow web interface.
-
----
-
-### 11. Run and Test the DAG Locally
-To test `my_dag.py` directly:
-```bash
-python3 dags/my_dag.py
-```
-
-This command will run the script locally and can help debug any issues before deploying it fully to Airflow.
-
----
-
-### Recap of Key Commands
-1. **Create Virtual Environment**:
-   ```bash
-   python3 -m venv airflow_new_venv
-   source airflow_new_venv/bin/activate
-   ```
-
-2. **Initialize and Start Airflow**:
-   ```bash
-   airflow db init
-   airflow webserver --port 8080
-   airflow scheduler
-   ```
-
-3. **Trigger DAG**:
-   ```bash
-   airflow dags trigger sample_dag
-   ```
-
-Now your Airflow environment should be fully set up on the VM, with your DAG files organized and triggered successfully.

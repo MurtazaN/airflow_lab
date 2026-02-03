@@ -1,4 +1,6 @@
 apache-airflow
+dvc[gs]
+flask
 scikit-learn
 scipy
 pandas
