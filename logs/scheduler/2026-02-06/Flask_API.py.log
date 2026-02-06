@@ -1,0 +1,464 @@
+[2026-02-06T21:33:17.159+0000] {processor.py:161} INFO - Started process (PID=43) to work on /opt/airflow/dags/Flask_API.py
+[2026-02-06T21:33:17.160+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/Flask_API.py for tasks to queue
+[2026-02-06T21:33:17.164+0000] {logging_mixin.py:188} INFO - [2026-02-06T21:33:17.163+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/Flask_API.py
+[2026-02-06T21:33:17.187+0000] {logging_mixin.py:188} INFO - [2026-02-06T21:33:17.183+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/Flask_API.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/Flask_API.py", line 9, in <module>
+    from airflow.providers.standard.operators.python import PythonOperator
+ModuleNotFoundError: No module named 'airflow.providers.standard'
+[2026-02-06T21:33:17.189+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/Flask_API.py
+[2026-02-06T21:33:17.215+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/Flask_API.py took 0.064 seconds
+[2026-02-06T21:33:47.365+0000] {processor.py:161} INFO - Started process (PID=61) to work on /opt/airflow/dags/Flask_API.py
+[2026-02-06T21:33:47.366+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/Flask_API.py for tasks to queue
+[2026-02-06T21:33:47.369+0000] {logging_mixin.py:188} INFO - [2026-02-06T21:33:47.367+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/Flask_API.py
+[2026-02-06T21:33:47.376+0000] {logging_mixin.py:188} INFO - [2026-02-06T21:33:47.375+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/Flask_API.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/Flask_API.py", line 9, in <module>
+    from airflow.providers.standard.operators.python import PythonOperator
+ModuleNotFoundError: No module named 'airflow.providers.standard'
+[2026-02-06T21:33:47.376+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/Flask_API.py
+[2026-02-06T21:33:47.391+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/Flask_API.py took 0.032 seconds
+[2026-02-06T21:34:17.452+0000] {processor.py:161} INFO - Started process (PID=79) to work on /opt/airflow/dags/Flask_API.py
+[2026-02-06T21:34:17.453+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/Flask_API.py for tasks to queue
+[2026-02-06T21:34:17.454+0000] {logging_mixin.py:188} INFO - [2026-02-06T21:34:17.454+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/Flask_API.py
+[2026-02-06T21:34:17.458+0000] {logging_mixin.py:188} INFO - [2026-02-06T21:34:17.458+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/Flask_API.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/Flask_API.py", line 9, in <module>
+    from airflow.providers.standard.operators.python import PythonOperator
+ModuleNotFoundError: No module named 'airflow.providers.standard'
+[2026-02-06T21:34:17.460+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/Flask_API.py
+[2026-02-06T21:34:17.474+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/Flask_API.py took 0.026 seconds
+[2026-02-06T21:34:47.692+0000] {processor.py:161} INFO - Started process (PID=97) to work on /opt/airflow/dags/Flask_API.py
+[2026-02-06T21:34:47.693+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/Flask_API.py for tasks to queue
+[2026-02-06T21:34:47.694+0000] {logging_mixin.py:188} INFO - [2026-02-06T21:34:47.694+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/Flask_API.py
+[2026-02-06T21:34:47.697+0000] {logging_mixin.py:188} INFO - [2026-02-06T21:34:47.696+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/Flask_API.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/Flask_API.py", line 9, in <module>
+    from airflow.providers.standard.operators.python import PythonOperator
+ModuleNotFoundError: No module named 'airflow.providers.standard'
+[2026-02-06T21:34:47.697+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/Flask_API.py
+[2026-02-06T21:34:47.708+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/Flask_API.py took 0.021 seconds
+[2026-02-06T21:35:17.949+0000] {processor.py:161} INFO - Started process (PID=115) to work on /opt/airflow/dags/Flask_API.py
+[2026-02-06T21:35:17.950+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/Flask_API.py for tasks to queue
+[2026-02-06T21:35:17.952+0000] {logging_mixin.py:188} INFO - [2026-02-06T21:35:17.952+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/Flask_API.py
+[2026-02-06T21:35:17.956+0000] {logging_mixin.py:188} INFO - [2026-02-06T21:35:17.955+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/Flask_API.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/Flask_API.py", line 9, in <module>
+    from airflow.providers.standard.operators.python import PythonOperator
+ModuleNotFoundError: No module named 'airflow.providers.standard'
+[2026-02-06T21:35:17.957+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/Flask_API.py
+[2026-02-06T21:35:17.972+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/Flask_API.py took 0.027 seconds
+[2026-02-06T21:35:48.252+0000] {processor.py:161} INFO - Started process (PID=134) to work on /opt/airflow/dags/Flask_API.py
+[2026-02-06T21:35:48.253+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/Flask_API.py for tasks to queue
+[2026-02-06T21:35:48.256+0000] {logging_mixin.py:188} INFO - [2026-02-06T21:35:48.256+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/Flask_API.py
+[2026-02-06T21:35:48.261+0000] {logging_mixin.py:188} INFO - [2026-02-06T21:35:48.260+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/Flask_API.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/Flask_API.py", line 9, in <module>
+    from airflow.providers.standard.operators.python import PythonOperator
+ModuleNotFoundError: No module named 'airflow.providers.standard'
+[2026-02-06T21:35:48.261+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/Flask_API.py
+[2026-02-06T21:35:48.273+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/Flask_API.py took 0.027 seconds
+[2026-02-06T21:36:18.381+0000] {processor.py:161} INFO - Started process (PID=152) to work on /opt/airflow/dags/Flask_API.py
+[2026-02-06T21:36:18.382+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/Flask_API.py for tasks to queue
+[2026-02-06T21:36:18.384+0000] {logging_mixin.py:188} INFO - [2026-02-06T21:36:18.383+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/Flask_API.py
+[2026-02-06T21:36:18.389+0000] {logging_mixin.py:188} INFO - [2026-02-06T21:36:18.388+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/Flask_API.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/Flask_API.py", line 9, in <module>
+    from airflow.providers.standard.operators.python import PythonOperator
+ModuleNotFoundError: No module named 'airflow.providers.standard'
+[2026-02-06T21:36:18.389+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/Flask_API.py
+[2026-02-06T21:36:18.400+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/Flask_API.py took 0.023 seconds
+[2026-02-06T21:36:48.644+0000] {processor.py:161} INFO - Started process (PID=170) to work on /opt/airflow/dags/Flask_API.py
+[2026-02-06T21:36:48.645+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/Flask_API.py for tasks to queue
+[2026-02-06T21:36:48.646+0000] {logging_mixin.py:188} INFO - [2026-02-06T21:36:48.646+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/Flask_API.py
+[2026-02-06T21:36:48.650+0000] {logging_mixin.py:188} INFO - [2026-02-06T21:36:48.649+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/Flask_API.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/Flask_API.py", line 9, in <module>
+    from airflow.providers.standard.operators.python import PythonOperator
+ModuleNotFoundError: No module named 'airflow.providers.standard'
+[2026-02-06T21:36:48.650+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/Flask_API.py
+[2026-02-06T21:36:48.663+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/Flask_API.py took 0.022 seconds
+[2026-02-06T21:37:18.895+0000] {processor.py:161} INFO - Started process (PID=188) to work on /opt/airflow/dags/Flask_API.py
+[2026-02-06T21:37:18.896+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/Flask_API.py for tasks to queue
+[2026-02-06T21:37:18.899+0000] {logging_mixin.py:188} INFO - [2026-02-06T21:37:18.899+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/Flask_API.py
+[2026-02-06T21:37:18.903+0000] {logging_mixin.py:188} INFO - [2026-02-06T21:37:18.902+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/Flask_API.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/Flask_API.py", line 9, in <module>
+    from airflow.providers.standard.operators.python import PythonOperator
+ModuleNotFoundError: No module named 'airflow.providers.standard'
+[2026-02-06T21:37:18.903+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/Flask_API.py
+[2026-02-06T21:37:18.916+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/Flask_API.py took 0.026 seconds
+[2026-02-06T21:37:49.141+0000] {processor.py:161} INFO - Started process (PID=206) to work on /opt/airflow/dags/Flask_API.py
+[2026-02-06T21:37:49.142+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/Flask_API.py for tasks to queue
+[2026-02-06T21:37:49.144+0000] {logging_mixin.py:188} INFO - [2026-02-06T21:37:49.144+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/Flask_API.py
+[2026-02-06T21:37:49.149+0000] {logging_mixin.py:188} INFO - [2026-02-06T21:37:49.148+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/Flask_API.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/Flask_API.py", line 9, in <module>
+    from airflow.providers.standard.operators.python import PythonOperator
+ModuleNotFoundError: No module named 'airflow.providers.standard'
+[2026-02-06T21:37:49.149+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/Flask_API.py
+[2026-02-06T21:37:49.163+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/Flask_API.py took 0.029 seconds
+[2026-02-06T21:38:19.415+0000] {processor.py:161} INFO - Started process (PID=224) to work on /opt/airflow/dags/Flask_API.py
+[2026-02-06T21:38:19.417+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/Flask_API.py for tasks to queue
+[2026-02-06T21:38:19.419+0000] {logging_mixin.py:188} INFO - [2026-02-06T21:38:19.419+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/Flask_API.py
+[2026-02-06T21:38:19.427+0000] {logging_mixin.py:188} INFO - [2026-02-06T21:38:19.426+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/Flask_API.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/Flask_API.py", line 9, in <module>
+    from airflow.providers.standard.operators.python import PythonOperator
+ModuleNotFoundError: No module named 'airflow.providers.standard'
+[2026-02-06T21:38:19.428+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/Flask_API.py
+[2026-02-06T21:38:19.446+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/Flask_API.py took 0.039 seconds
+[2026-02-06T21:57:36.076+0000] {processor.py:186} INFO - Started process (PID=44) to work on /opt/airflow/dags/Flask_API.py
+[2026-02-06T21:57:36.080+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/Flask_API.py for tasks to queue
+[2026-02-06T21:57:36.083+0000] {logging_mixin.py:190} INFO - [2026-02-06T21:57:36.083+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/Flask_API.py
+[2026-02-06T21:57:36.092+0000] {logging_mixin.py:190} INFO - [2026-02-06T21:57:36.088+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/Flask_API.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/Flask_API.py", line 9, in <module>
+    from airflow.providers.standard.operators.python import PythonOperator
+ModuleNotFoundError: No module named 'airflow.providers.standard'
+[2026-02-06T21:57:36.093+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/Flask_API.py
+[2026-02-06T21:57:36.112+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/Flask_API.py took 0.043 seconds
+[2026-02-06T21:58:06.259+0000] {processor.py:186} INFO - Started process (PID=62) to work on /opt/airflow/dags/Flask_API.py
+[2026-02-06T21:58:06.261+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/Flask_API.py for tasks to queue
+[2026-02-06T21:58:06.264+0000] {logging_mixin.py:190} INFO - [2026-02-06T21:58:06.263+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/Flask_API.py
+[2026-02-06T21:58:06.270+0000] {logging_mixin.py:190} INFO - [2026-02-06T21:58:06.268+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/Flask_API.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/Flask_API.py", line 9, in <module>
+    from airflow.providers.standard.operators.python import PythonOperator
+ModuleNotFoundError: No module named 'airflow.providers.standard'
+[2026-02-06T21:58:06.270+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/Flask_API.py
+[2026-02-06T21:58:06.286+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/Flask_API.py took 0.034 seconds
+[2026-02-06T21:58:36.380+0000] {processor.py:186} INFO - Started process (PID=80) to work on /opt/airflow/dags/Flask_API.py
+[2026-02-06T21:58:36.380+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/Flask_API.py for tasks to queue
+[2026-02-06T21:58:36.383+0000] {logging_mixin.py:190} INFO - [2026-02-06T21:58:36.383+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/Flask_API.py
+[2026-02-06T21:58:36.387+0000] {logging_mixin.py:190} INFO - [2026-02-06T21:58:36.386+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/Flask_API.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/Flask_API.py", line 9, in <module>
+    from airflow.providers.standard.operators.python import PythonOperator
+ModuleNotFoundError: No module named 'airflow.providers.standard'
+[2026-02-06T21:58:36.388+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/Flask_API.py
+[2026-02-06T21:58:36.401+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/Flask_API.py took 0.024 seconds
+[2026-02-06T21:59:06.482+0000] {processor.py:186} INFO - Started process (PID=98) to work on /opt/airflow/dags/Flask_API.py
+[2026-02-06T21:59:06.483+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/Flask_API.py for tasks to queue
+[2026-02-06T21:59:06.485+0000] {logging_mixin.py:190} INFO - [2026-02-06T21:59:06.485+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/Flask_API.py
+[2026-02-06T21:59:06.489+0000] {logging_mixin.py:190} INFO - [2026-02-06T21:59:06.488+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/Flask_API.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/Flask_API.py", line 9, in <module>
+    from airflow.providers.standard.operators.python import PythonOperator
+ModuleNotFoundError: No module named 'airflow.providers.standard'
+[2026-02-06T21:59:06.490+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/Flask_API.py
+[2026-02-06T21:59:06.503+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/Flask_API.py took 0.026 seconds
+[2026-02-06T21:59:36.606+0000] {processor.py:186} INFO - Started process (PID=116) to work on /opt/airflow/dags/Flask_API.py
+[2026-02-06T21:59:36.607+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/Flask_API.py for tasks to queue
+[2026-02-06T21:59:36.609+0000] {logging_mixin.py:190} INFO - [2026-02-06T21:59:36.608+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/Flask_API.py
+[2026-02-06T21:59:36.612+0000] {logging_mixin.py:190} INFO - [2026-02-06T21:59:36.611+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/Flask_API.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/Flask_API.py", line 9, in <module>
+    from airflow.providers.standard.operators.python import PythonOperator
+ModuleNotFoundError: No module named 'airflow.providers.standard'
+[2026-02-06T21:59:36.612+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/Flask_API.py
+[2026-02-06T21:59:36.624+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/Flask_API.py took 0.024 seconds
+[2026-02-06T22:00:06.718+0000] {processor.py:186} INFO - Started process (PID=134) to work on /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:00:06.719+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/Flask_API.py for tasks to queue
+[2026-02-06T22:00:06.721+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:00:06.721+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:00:06.725+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:00:06.724+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/Flask_API.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/Flask_API.py", line 9, in <module>
+    from airflow.providers.standard.operators.python import PythonOperator
+ModuleNotFoundError: No module named 'airflow.providers.standard'
+[2026-02-06T22:00:06.726+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:00:06.739+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/Flask_API.py took 0.024 seconds
+[2026-02-06T22:00:36.808+0000] {processor.py:186} INFO - Started process (PID=152) to work on /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:00:36.809+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/Flask_API.py for tasks to queue
+[2026-02-06T22:00:36.811+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:00:36.811+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:00:36.817+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:00:36.816+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/Flask_API.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/Flask_API.py", line 9, in <module>
+    from airflow.providers.standard.operators.python import PythonOperator
+ModuleNotFoundError: No module named 'airflow.providers.standard'
+[2026-02-06T22:00:36.817+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:00:36.833+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/Flask_API.py took 0.029 seconds
+[2026-02-06T22:01:07.007+0000] {processor.py:186} INFO - Started process (PID=170) to work on /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:01:07.007+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/Flask_API.py for tasks to queue
+[2026-02-06T22:01:07.009+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:01:07.009+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:01:07.012+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:01:07.011+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/Flask_API.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/Flask_API.py", line 9, in <module>
+    from airflow.providers.standard.operators.python import PythonOperator
+ModuleNotFoundError: No module named 'airflow.providers.standard'
+[2026-02-06T22:01:07.014+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:01:07.027+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/Flask_API.py took 0.025 seconds
+[2026-02-06T22:01:37.102+0000] {processor.py:186} INFO - Started process (PID=188) to work on /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:01:37.102+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/Flask_API.py for tasks to queue
+[2026-02-06T22:01:37.105+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:01:37.104+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:01:37.108+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:01:37.107+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/Flask_API.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/Flask_API.py", line 9, in <module>
+    from airflow.providers.standard.operators.python import PythonOperator
+ModuleNotFoundError: No module named 'airflow.providers.standard'
+[2026-02-06T22:01:37.109+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:01:37.122+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/Flask_API.py took 0.025 seconds
+[2026-02-06T22:02:07.295+0000] {processor.py:186} INFO - Started process (PID=206) to work on /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:02:07.295+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/Flask_API.py for tasks to queue
+[2026-02-06T22:02:07.297+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:02:07.297+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:02:07.300+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:02:07.299+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/Flask_API.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/Flask_API.py", line 9, in <module>
+    from airflow.providers.standard.operators.python import PythonOperator
+ModuleNotFoundError: No module named 'airflow.providers.standard'
+[2026-02-06T22:02:07.300+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:02:07.312+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/Flask_API.py took 0.021 seconds
+[2026-02-06T22:02:37.359+0000] {processor.py:186} INFO - Started process (PID=224) to work on /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:02:37.360+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/Flask_API.py for tasks to queue
+[2026-02-06T22:02:37.362+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:02:37.361+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:02:37.366+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:02:37.365+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/Flask_API.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/Flask_API.py", line 9, in <module>
+    from airflow.providers.standard.operators.python import PythonOperator
+ModuleNotFoundError: No module named 'airflow.providers.standard'
+[2026-02-06T22:02:37.367+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:02:37.379+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/Flask_API.py took 0.023 seconds
+[2026-02-06T22:03:07.419+0000] {processor.py:186} INFO - Started process (PID=242) to work on /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:03:07.420+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/Flask_API.py for tasks to queue
+[2026-02-06T22:03:07.422+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:03:07.422+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:03:07.428+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:03:07.427+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/Flask_API.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/Flask_API.py", line 9, in <module>
+    from airflow.providers.standard.operators.python import PythonOperator
+ModuleNotFoundError: No module named 'airflow.providers.standard'
+[2026-02-06T22:03:07.429+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:03:07.449+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/Flask_API.py took 0.036 seconds
+[2026-02-06T22:03:11.509+0000] {processor.py:186} INFO - Started process (PID=249) to work on /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:03:11.510+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/Flask_API.py for tasks to queue
+[2026-02-06T22:03:11.512+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:03:11.511+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:03:11.533+0000] {processor.py:925} INFO - DAG(s) 'Airflow_Lab2_Flask' retrieved from /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:03:11.678+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:03:11.677+0000] {override.py:1900} INFO - Created Permission View: can delete on DAG:Airflow_Lab2_Flask
+[2026-02-06T22:03:11.682+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:03:11.682+0000] {override.py:1900} INFO - Created Permission View: can read on DAG:Airflow_Lab2_Flask
+[2026-02-06T22:03:11.684+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:03:11.684+0000] {override.py:1900} INFO - Created Permission View: can edit on DAG:Airflow_Lab2_Flask
+[2026-02-06T22:03:11.686+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:03:11.686+0000] {override.py:1900} INFO - Created Permission View: can create on DAG Run:Airflow_Lab2_Flask
+[2026-02-06T22:03:11.688+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:03:11.688+0000] {override.py:1900} INFO - Created Permission View: can delete on DAG Run:Airflow_Lab2_Flask
+[2026-02-06T22:03:11.690+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:03:11.690+0000] {override.py:1900} INFO - Created Permission View: can read on DAG Run:Airflow_Lab2_Flask
+[2026-02-06T22:03:11.692+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:03:11.692+0000] {override.py:1900} INFO - Created Permission View: menu access on DAG Run:Airflow_Lab2_Flask
+[2026-02-06T22:03:11.692+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:03:11.692+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-02-06T22:03:11.699+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:03:11.699+0000] {dag.py:3262} INFO - Creating ORM DAG for Airflow_Lab2_Flask
+[2026-02-06T22:03:11.699+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:03:11.699+0000] {dag.py:4180} INFO - Setting next_dagrun for Airflow_Lab2_Flask to None, run_after=None
+[2026-02-06T22:03:11.707+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/Flask_API.py took 0.202 seconds
+[2026-02-06T22:03:42.546+0000] {processor.py:186} INFO - Started process (PID=267) to work on /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:03:42.547+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/Flask_API.py for tasks to queue
+[2026-02-06T22:03:42.548+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:03:42.548+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:03:42.557+0000] {processor.py:925} INFO - DAG(s) 'Airflow_Lab2_Flask' retrieved from /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:03:42.577+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:03:42.577+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-02-06T22:03:42.585+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:03:42.585+0000] {dag.py:4180} INFO - Setting next_dagrun for Airflow_Lab2_Flask to None, run_after=None
+[2026-02-06T22:03:42.594+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/Flask_API.py took 0.053 seconds
+[2026-02-06T22:04:12.719+0000] {processor.py:186} INFO - Started process (PID=286) to work on /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:04:12.720+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/Flask_API.py for tasks to queue
+[2026-02-06T22:04:12.723+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:04:12.723+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:04:12.738+0000] {processor.py:925} INFO - DAG(s) 'Airflow_Lab2_Flask' retrieved from /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:04:12.754+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:04:12.754+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-02-06T22:04:12.761+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:04:12.761+0000] {dag.py:4180} INFO - Setting next_dagrun for Airflow_Lab2_Flask to None, run_after=None
+[2026-02-06T22:04:12.771+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/Flask_API.py took 0.059 seconds
+[2026-02-06T22:04:51.971+0000] {processor.py:186} INFO - Started process (PID=44) to work on /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:04:51.972+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/Flask_API.py for tasks to queue
+[2026-02-06T22:04:51.975+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:04:51.974+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:04:52.010+0000] {processor.py:925} INFO - DAG(s) 'Airflow_Lab2_Flask' retrieved from /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:04:52.045+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:04:52.045+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-02-06T22:04:52.059+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:04:52.059+0000] {dag.py:4180} INFO - Setting next_dagrun for Airflow_Lab2_Flask to None, run_after=None
+[2026-02-06T22:04:52.072+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/Flask_API.py took 0.106 seconds
+[2026-02-06T22:05:22.137+0000] {processor.py:186} INFO - Started process (PID=62) to work on /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:05:22.138+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/Flask_API.py for tasks to queue
+[2026-02-06T22:05:22.140+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:05:22.139+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:05:22.154+0000] {processor.py:925} INFO - DAG(s) 'Airflow_Lab2_Flask' retrieved from /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:05:22.171+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:05:22.170+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-02-06T22:05:22.178+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:05:22.178+0000] {dag.py:4180} INFO - Setting next_dagrun for Airflow_Lab2_Flask to None, run_after=None
+[2026-02-06T22:05:22.187+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/Flask_API.py took 0.055 seconds
+[2026-02-06T22:05:52.295+0000] {processor.py:186} INFO - Started process (PID=80) to work on /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:05:52.296+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/Flask_API.py for tasks to queue
+[2026-02-06T22:05:52.298+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:05:52.298+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:05:52.316+0000] {processor.py:925} INFO - DAG(s) 'Airflow_Lab2_Flask' retrieved from /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:05:52.334+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:05:52.333+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-02-06T22:05:52.342+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:05:52.342+0000] {dag.py:4180} INFO - Setting next_dagrun for Airflow_Lab2_Flask to None, run_after=None
+[2026-02-06T22:05:52.351+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/Flask_API.py took 0.061 seconds
+[2026-02-06T22:13:04.414+0000] {processor.py:186} INFO - Started process (PID=44) to work on /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:13:04.415+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/Flask_API.py for tasks to queue
+[2026-02-06T22:13:04.418+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:13:04.418+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:13:04.442+0000] {processor.py:925} INFO - DAG(s) 'Airflow_Lab2_Flask' retrieved from /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:13:04.614+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:13:04.614+0000] {override.py:1900} INFO - Created Permission View: can delete on DAG:Airflow_Lab2_Flask
+[2026-02-06T22:13:04.621+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:13:04.621+0000] {override.py:1900} INFO - Created Permission View: can edit on DAG:Airflow_Lab2_Flask
+[2026-02-06T22:13:04.626+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:13:04.626+0000] {override.py:1900} INFO - Created Permission View: can read on DAG:Airflow_Lab2_Flask
+[2026-02-06T22:13:04.632+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:13:04.632+0000] {override.py:1900} INFO - Created Permission View: can delete on DAG Run:Airflow_Lab2_Flask
+[2026-02-06T22:13:04.639+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:13:04.639+0000] {override.py:1900} INFO - Created Permission View: can create on DAG Run:Airflow_Lab2_Flask
+[2026-02-06T22:13:04.642+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:13:04.642+0000] {override.py:1900} INFO - Created Permission View: menu access on DAG Run:Airflow_Lab2_Flask
+[2026-02-06T22:13:04.645+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:13:04.645+0000] {override.py:1900} INFO - Created Permission View: can read on DAG Run:Airflow_Lab2_Flask
+[2026-02-06T22:13:04.646+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:13:04.646+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-02-06T22:13:04.659+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:13:04.659+0000] {dag.py:3262} INFO - Creating ORM DAG for Airflow_Lab2_Flask
+[2026-02-06T22:13:04.660+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:13:04.660+0000] {dag.py:4180} INFO - Setting next_dagrun for Airflow_Lab2_Flask to None, run_after=None
+[2026-02-06T22:13:04.683+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/Flask_API.py took 0.273 seconds
+[2026-02-06T22:13:35.541+0000] {processor.py:186} INFO - Started process (PID=62) to work on /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:13:35.542+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/Flask_API.py for tasks to queue
+[2026-02-06T22:13:35.543+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:13:35.543+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:13:35.553+0000] {processor.py:925} INFO - DAG(s) 'Airflow_Lab2_Flask' retrieved from /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:13:35.568+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:13:35.568+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-02-06T22:13:35.577+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:13:35.577+0000] {dag.py:4180} INFO - Setting next_dagrun for Airflow_Lab2_Flask to None, run_after=None
+[2026-02-06T22:13:35.587+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/Flask_API.py took 0.050 seconds
+[2026-02-06T22:14:05.951+0000] {processor.py:186} INFO - Started process (PID=80) to work on /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:14:05.952+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/Flask_API.py for tasks to queue
+[2026-02-06T22:14:05.954+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:14:05.954+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:14:05.970+0000] {processor.py:925} INFO - DAG(s) 'Airflow_Lab2_Flask' retrieved from /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:14:05.988+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:14:05.988+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-02-06T22:14:05.995+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:14:05.995+0000] {dag.py:4180} INFO - Setting next_dagrun for Airflow_Lab2_Flask to None, run_after=None
+[2026-02-06T22:14:06.003+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/Flask_API.py took 0.059 seconds
+[2026-02-06T22:15:58.688+0000] {processor.py:186} INFO - Started process (PID=43) to work on /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:15:58.689+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/Flask_API.py for tasks to queue
+[2026-02-06T22:15:58.692+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:15:58.691+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:15:58.715+0000] {processor.py:925} INFO - DAG(s) 'Airflow_Lab2_Flask' retrieved from /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:15:58.736+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:15:58.736+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-02-06T22:15:58.752+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:15:58.752+0000] {dag.py:4180} INFO - Setting next_dagrun for Airflow_Lab2_Flask to None, run_after=None
+[2026-02-06T22:15:58.764+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/Flask_API.py took 0.084 seconds
+[2026-02-06T22:16:29.104+0000] {processor.py:186} INFO - Started process (PID=69) to work on /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:16:29.104+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/Flask_API.py for tasks to queue
+[2026-02-06T22:16:29.106+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:16:29.106+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:16:29.117+0000] {processor.py:925} INFO - DAG(s) 'Airflow_Lab2_Flask' retrieved from /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:16:29.130+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:16:29.130+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-02-06T22:16:29.138+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:16:29.138+0000] {dag.py:4180} INFO - Setting next_dagrun for Airflow_Lab2_Flask to None, run_after=None
+[2026-02-06T22:16:29.148+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/Flask_API.py took 0.052 seconds
+[2026-02-06T22:16:59.230+0000] {processor.py:186} INFO - Started process (PID=100) to work on /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:16:59.231+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/Flask_API.py for tasks to queue
+[2026-02-06T22:16:59.234+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:16:59.234+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:16:59.247+0000] {processor.py:925} INFO - DAG(s) 'Airflow_Lab2_Flask' retrieved from /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:16:59.260+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:16:59.260+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-02-06T22:16:59.268+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:16:59.268+0000] {dag.py:4180} INFO - Setting next_dagrun for Airflow_Lab2_Flask to None, run_after=None
+[2026-02-06T22:16:59.276+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/Flask_API.py took 0.054 seconds
+[2026-02-06T22:17:29.397+0000] {processor.py:186} INFO - Started process (PID=127) to work on /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:17:29.398+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/Flask_API.py for tasks to queue
+[2026-02-06T22:17:29.399+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:17:29.399+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:17:29.411+0000] {processor.py:925} INFO - DAG(s) 'Airflow_Lab2_Flask' retrieved from /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:17:29.425+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:17:29.425+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-02-06T22:17:29.432+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:17:29.432+0000] {dag.py:4180} INFO - Setting next_dagrun for Airflow_Lab2_Flask to None, run_after=None
+[2026-02-06T22:17:29.441+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/Flask_API.py took 0.047 seconds
+[2026-02-06T22:17:59.533+0000] {processor.py:186} INFO - Started process (PID=154) to work on /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:17:59.534+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/Flask_API.py for tasks to queue
+[2026-02-06T22:17:59.537+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:17:59.536+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:17:59.548+0000] {processor.py:925} INFO - DAG(s) 'Airflow_Lab2_Flask' retrieved from /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:17:59.562+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:17:59.561+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-02-06T22:17:59.570+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:17:59.570+0000] {dag.py:4180} INFO - Setting next_dagrun for Airflow_Lab2_Flask to None, run_after=None
+[2026-02-06T22:17:59.580+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/Flask_API.py took 0.053 seconds
+[2026-02-06T22:18:29.718+0000] {processor.py:186} INFO - Started process (PID=181) to work on /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:18:29.719+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/Flask_API.py for tasks to queue
+[2026-02-06T22:18:29.722+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:18:29.722+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:18:29.737+0000] {processor.py:925} INFO - DAG(s) 'Airflow_Lab2_Flask' retrieved from /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:18:29.756+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:18:29.756+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-02-06T22:18:29.763+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:18:29.763+0000] {dag.py:4180} INFO - Setting next_dagrun for Airflow_Lab2_Flask to None, run_after=None
+[2026-02-06T22:18:29.772+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/Flask_API.py took 0.061 seconds
+[2026-02-06T22:18:59.884+0000] {processor.py:186} INFO - Started process (PID=208) to work on /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:18:59.885+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/Flask_API.py for tasks to queue
+[2026-02-06T22:18:59.888+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:18:59.888+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:18:59.900+0000] {processor.py:925} INFO - DAG(s) 'Airflow_Lab2_Flask' retrieved from /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:18:59.914+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:18:59.914+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-02-06T22:19:00.026+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:19:00.026+0000] {dag.py:4180} INFO - Setting next_dagrun for Airflow_Lab2_Flask to None, run_after=None
+[2026-02-06T22:19:00.036+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/Flask_API.py took 0.160 seconds
+[2026-02-06T22:19:30.065+0000] {processor.py:186} INFO - Started process (PID=235) to work on /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:19:30.065+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/Flask_API.py for tasks to queue
+[2026-02-06T22:19:30.067+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:19:30.067+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:19:30.078+0000] {processor.py:925} INFO - DAG(s) 'Airflow_Lab2_Flask' retrieved from /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:19:30.192+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:19:30.192+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-02-06T22:19:30.198+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:19:30.198+0000] {dag.py:4180} INFO - Setting next_dagrun for Airflow_Lab2_Flask to None, run_after=None
+[2026-02-06T22:19:30.206+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/Flask_API.py took 0.146 seconds
+[2026-02-06T22:20:00.307+0000] {processor.py:186} INFO - Started process (PID=262) to work on /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:20:00.309+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/Flask_API.py for tasks to queue
+[2026-02-06T22:20:00.314+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:20:00.313+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:20:00.322+0000] {processor.py:925} INFO - DAG(s) 'Airflow_Lab2_Flask' retrieved from /opt/airflow/dags/Flask_API.py
+[2026-02-06T22:20:00.336+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:20:00.336+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-02-06T22:20:00.344+0000] {logging_mixin.py:190} INFO - [2026-02-06T22:20:00.343+0000] {dag.py:4180} INFO - Setting next_dagrun for Airflow_Lab2_Flask to None, run_after=None
+[2026-02-06T22:20:00.352+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/Flask_API.py took 0.050 seconds

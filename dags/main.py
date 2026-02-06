@@ -3,11 +3,17 @@ from __future__ import annotations
 
 import pendulum
 from airflow import DAG
-from airflow.providers.standard.operators.bash import BashOperator
-from airflow.providers.standard.operators.python import PythonOperator
+
+# syntax works with Airflow 2.9 and 2.10
+from airflow.operators.python import PythonOperator
+from airflow.operators.bash import BashOperator
+# from airflow.providers.standard.operators.bash import BashOperator
+# from airflow.providers.standard.operators.python import PythonOperator
 from airflow.providers.smtp.operators.smtp import EmailOperator
-from airflow.providers.standard.operators.trigger_dagrun import TriggerDagRunOperator
-from airflow.task.trigger_rule import TriggerRule
+# from airflow.providers.standard.operators.trigger_dagrun import TriggerDagRunOperator
+from airflow.operators.trigger_dagrun import TriggerDagRunOperator
+# from airflow.task.trigger_rule import TriggerRule
+from airflow.utils.trigger_rule import TriggerRule
 
 from src.model_development import (
     load_data,
@@ -31,7 +37,7 @@ dag = DAG(
     schedule="@daily",
     catchup=False,
     tags=["example"],
-    owner_links={"Ramin Mohammadi": "https://github.com/raminmohammadi/MLOps/"},
+    owner_links={"Murtaza Nipplewala": "https://github.com/MurtazaN/airflow_lab"},
     max_active_runs=1,
 )
 
@@ -39,7 +45,7 @@ dag = DAG(
 owner_task = BashOperator(
     task_id="task_using_linked_owner",
     bash_command="echo 1",
-    owner="Ramin Mohammadi",
+    owner="Murtaza Nipplewala",
     dag=dag,
 )
 
