@@ -1,6 +1,9 @@
 # Environment variables
 .env
 
+# Local Airflow configuration file
+config/airflow.cfg
+
 # Python
 __pycache__/
 *.py[cod]
