@@ -1,0 +1,230 @@
+[2026-02-07T20:19:06.433+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-02-07T20:19:06.441+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Airflow_Lab2_Flask.start_Flask_API manual__2026-02-07T20:05:26.452828+00:00 [queued]>
+[2026-02-07T20:19:06.444+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Airflow_Lab2_Flask.start_Flask_API manual__2026-02-07T20:05:26.452828+00:00 [queued]>
+[2026-02-07T20:19:06.444+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2026-02-07T20:19:06.450+0000] {taskinstance.py:2888} INFO - Executing <Task(PythonOperator): start_Flask_API> on 2026-02-07 20:05:26.452828+00:00
+[2026-02-07T20:19:06.453+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=120) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-02-07T20:19:06.454+0000] {standard_task_runner.py:72} INFO - Started process 121 to run task
+[2026-02-07T20:19:06.455+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'Airflow_Lab2_Flask', 'start_Flask_API', 'manual__2026-02-07T20:05:26.452828+00:00', '--job-id', '20', '--raw', '--subdir', 'DAGS_FOLDER/Flask_API.py', '--cfg-path', '/tmp/tmpuf2r1vts']
+[2026-02-07T20:19:06.456+0000] {standard_task_runner.py:105} INFO - Job 20: Subtask start_Flask_API
+[2026-02-07T20:19:06.481+0000] {task_command.py:467} INFO - Running <TaskInstance: Airflow_Lab2_Flask.start_Flask_API manual__2026-02-07T20:05:26.452828+00:00 [running]> on host a06de3b696c8
+[2026-02-07T20:19:06.517+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Airflow_Lab2_Flask' AIRFLOW_CTX_TASK_ID='start_Flask_API' AIRFLOW_CTX_EXECUTION_DATE='2026-02-07T20:05:26.452828+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-02-07T20:05:26.452828+00:00'
+[2026-02-07T20:19:06.518+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-02-07T20:19:06.535+0000] {logging_mixin.py:190} INFO - Starting Flask on 0.0.0.0:5555 ...
+[2026-02-07T20:19:06.544+0000] {logging_mixin.py:190} INFO -  * Serving Flask app 'unusual_prefix_fb1fa9258fa1ad786b4829a3672e98fa2e7542a0_Flask_API'
+[2026-02-07T20:19:06.544+0000] {logging_mixin.py:190} INFO -  * Debug mode: off
+[2026-02-07T20:19:06.546+0000] {_internal.py:224} INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5555
+ * Running on http://172.18.0.6:5555
+[2026-02-07T20:19:06.546+0000] {_internal.py:224} INFO - [33mPress CTRL+C to quit[0m
+[2026-02-07T20:19:36.701+0000] {local_task_job_runner.py:346} WARNING - State of this instance has been externally set to None. Terminating instance.
+[2026-02-07T20:19:36.702+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-02-07T20:19:36.703+0000] {process_utils.py:132} INFO - Sending 15 to group 121. PIDs of all processes in the group: [121]
+[2026-02-07T20:19:36.703+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 121
+[2026-02-07T20:19:36.703+0000] {taskinstance.py:3092} ERROR - Received SIGTERM. Terminating subprocesses.
+[2026-02-07T20:19:36.711+0000] {taskinstance.py:3310} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/Flask_API.py", line 89, in start_flask_app
+    app.run(host="0.0.0.0", port=5555, use_reloader=False)
+  File "/home/airflow/.local/lib/python3.12/site-packages/flask/app.py", line 1191, in run
+    run_simple(t.cast(str, host), port, self, **options)
+  File "/home/airflow/.local/lib/python3.12/site-packages/werkzeug/serving.py", line 1069, in run_simple
+    srv.serve_forever()
+  File "/home/airflow/.local/lib/python3.12/site-packages/werkzeug/serving.py", line 766, in serve_forever
+    super().serve_forever(poll_interval=poll_interval)
+  File "/usr/local/lib/python3.12/socketserver.py", line 235, in serve_forever
+    ready = selector.select(poll_interval)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/selectors.py", line 415, in select
+    fd_event_list = self._selector.poll(timeout)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3094, in signal_handler
+    raise AirflowTaskTerminated("Task received SIGTERM signal")
+airflow.exceptions.AirflowTaskTerminated: Task received SIGTERM signal
+[2026-02-07T20:19:36.716+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=Airflow_Lab2_Flask, task_id=start_Flask_API, run_id=manual__2026-02-07T20:05:26.452828+00:00, execution_date=20260207T200526, start_date=20260207T201906, end_date=20260207T201936
+[2026-02-07T20:19:36.725+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-02-07T20:19:36.726+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 20 for task start_Flask_API ((psycopg2.errors.ForeignKeyViolation) insert or update on table "task_fail" violates foreign key constraint "task_fail_ti_fkey"
+DETAIL:  Key (dag_id, task_id, run_id, map_index)=(Airflow_Lab2_Flask, start_Flask_API, manual__2026-02-07T20:05:26.452828+00:00, -1) is not present in table "task_instance".
+
+[SQL: INSERT INTO task_fail (task_id, dag_id, run_id, map_index, start_date, end_date, duration) VALUES (%(task_id)s, %(dag_id)s, %(run_id)s, %(map_index)s, %(start_date)s, %(end_date)s, %(duration)s) RETURNING task_fail.id]
+[parameters: {'task_id': 'start_Flask_API', 'dag_id': 'Airflow_Lab2_Flask', 'run_id': 'manual__2026-02-07T20:05:26.452828+00:00', 'map_index': -1, 'start_date': datetime.datetime(2026, 2, 7, 20, 19, 6, 441420, tzinfo=Timezone('UTC')), 'end_date': datetime.datetime(2026, 2, 7, 20, 19, 36, 715635, tzinfo=Timezone('UTC')), 'duration': 30}]
+(Background on this error at: https://sqlalche.me/e/14/gkpj); 121)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3158, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3182, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/Flask_API.py", line 89, in start_flask_app
+    app.run(host="0.0.0.0", port=5555, use_reloader=False)
+  File "/home/airflow/.local/lib/python3.12/site-packages/flask/app.py", line 1191, in run
+    run_simple(t.cast(str, host), port, self, **options)
+  File "/home/airflow/.local/lib/python3.12/site-packages/werkzeug/serving.py", line 1069, in run_simple
+    srv.serve_forever()
+  File "/home/airflow/.local/lib/python3.12/site-packages/werkzeug/serving.py", line 766, in serve_forever
+    super().serve_forever(poll_interval=poll_interval)
+  File "/usr/local/lib/python3.12/socketserver.py", line 235, in serve_forever
+    ready = selector.select(poll_interval)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/selectors.py", line 415, in select
+    fd_event_list = self._selector.poll(timeout)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3094, in signal_handler
+    raise AirflowTaskTerminated("Task received SIGTERM signal")
+airflow.exceptions.AirflowTaskTerminated: Task received SIGTERM signal
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1910, in _execute_context
+    self.dialect.do_execute(
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.ForeignKeyViolation: insert or update on table "task_fail" violates foreign key constraint "task_fail_ti_fkey"
+DETAIL:  Key (dag_id, task_id, run_id, map_index)=(Airflow_Lab2_Flask, start_Flask_API, manual__2026-02-07T20:05:26.452828+00:00, -1) is not present in table "task_instance".
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 115, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3004, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 327, in _run_raw_task
+    ti.handle_failure(e, test_mode, context, session=session)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 94, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3427, in handle_failure
+    _handle_failure(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 94, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/api_internal/internal_api_call.py", line 139, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 1243, in _handle_failure
+    TaskInstance.save_to_db(failure_context["ti"], session)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/api_internal/internal_api_call.py", line 139, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 94, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3399, in save_to_db
+    session.flush()
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 3449, in flush
+    self._flush(objects)
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 3588, in _flush
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 3549, in _flush
+    flush_context.execute()
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/orm/unitofwork.py", line 456, in execute
+    rec.execute(self)
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/orm/unitofwork.py", line 630, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/orm/persistence.py", line 245, in save_obj
+    _emit_insert_statements(
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/orm/persistence.py", line 1238, in _emit_insert_statements
+    result = connection._execute_20(
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1710, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 334, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1577, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1953, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2134, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1910, in _execute_context
+    self.dialect.do_execute(
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (psycopg2.errors.ForeignKeyViolation) insert or update on table "task_fail" violates foreign key constraint "task_fail_ti_fkey"
+DETAIL:  Key (dag_id, task_id, run_id, map_index)=(Airflow_Lab2_Flask, start_Flask_API, manual__2026-02-07T20:05:26.452828+00:00, -1) is not present in table "task_instance".
+
+[SQL: INSERT INTO task_fail (task_id, dag_id, run_id, map_index, start_date, end_date, duration) VALUES (%(task_id)s, %(dag_id)s, %(run_id)s, %(map_index)s, %(start_date)s, %(end_date)s, %(duration)s) RETURNING task_fail.id]
+[parameters: {'task_id': 'start_Flask_API', 'dag_id': 'Airflow_Lab2_Flask', 'run_id': 'manual__2026-02-07T20:05:26.452828+00:00', 'map_index': -1, 'start_date': datetime.datetime(2026, 2, 7, 20, 19, 6, 441420, tzinfo=Timezone('UTC')), 'end_date': datetime.datetime(2026, 2, 7, 20, 19, 36, 715635, tzinfo=Timezone('UTC')), 'duration': 30}]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+[2026-02-07T20:19:36.760+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=121, status='terminated', exitcode=1, started='20:19:05') (121) terminated with exit code 1

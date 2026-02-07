@@ -49,13 +49,13 @@ owner_task = BashOperator(
     dag=dag,
 )
 
-send_email = EmailOperator(
-    task_id="send_email",
-    to="murtaza.sn786@gmail.com",
-    subject="Notification from Airflow",
-    html_content="<p>This is a notification email sent from Airflow.</p>",
-    dag=dag,
-)
+# send_email = EmailOperator(
+#     task_id="send_email",
+#     to="murtaza.sn786@gmail.com",
+#     subject="Notification from Airflow",
+#     html_content="<p>This is a notification email sent from Airflow.</p>",
+#     dag=dag,
+# )
 
 load_data_task = PythonOperator(
     task_id="load_data_task",
@@ -108,4 +108,4 @@ owner_task >> load_data_task >> data_preprocessing_task >> \
     load_model_task >> trigger_dag_task
 
 # # Optional: email after model loads (independent branch)
-load_model_task >> send_email
+# load_model_task >> send_email

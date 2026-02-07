@@ -68,7 +68,16 @@ x-airflow-common:
     AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'true'
     AIRFLOW__CORE__LOAD_EXAMPLES: 'false' #true'
     AIRFLOW__API__AUTH_BACKENDS: 'airflow.api.auth.backend.basic_auth,airflow.api.auth.backend.session'
-    # yamllint disable rule:line-length
+    # SMTP settings via Airflow config (used by send_email_smtp)
+    AIRFLOW__SMTP__SMTP_HOST: 'smtp.gmail.com'
+    AIRFLOW__SMTP__SMTP_PORT: '465'
+    AIRFLOW__SMTP__SMTP_USER: 'murtaza.sn786@gmail.com'
+    AIRFLOW__SMTP__SMTP_PASSWORD: 'qlep vngv fmgg zlkz'
+    AIRFLOW__SMTP__SMTP_MAIL_FROM: 'murtaza.sn786@gmail.com'
+    AIRFLOW__SMTP__SMTP_SSL: 'True'
+    AIRFLOW__SMTP__SMTP_STARTTLS: 'False'
+    # SMTP connection for EmailOperator (JSON format)
+    AIRFLOW_CONN_SMTP_DEFAULT: '{"conn_type": "smtp", "host": "smtp.gmail.com", "port": 465, "login": "murtaza.sn786@gmail.com", "password": "qlep vngv fmgg zlkz", "extra": {"smtp_ssl": true, "smtp_starttls": false}}'
     # Use simple http server on scheduler for health checks
     # See https://airflow.apache.org/docs/apache-airflow/stable/administration-and-deployment/logging-monitoring/check-health.html#scheduler-health-check-server
     # yamllint enable rule:line-length
@@ -158,6 +167,9 @@ services:
   airflow-worker:
     <<: *airflow-common
     command: celery worker
+    # exposing port / added port 5555 mapping to the worker
+    ports:
+      - "5555:5555"
     healthcheck:
       # yamllint disable rule:line-length
       test:

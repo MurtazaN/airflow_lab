@@ -4,6 +4,9 @@
 # Local Airflow configuration file
 config/airflow.cfg
 
+# docker-compose file
+docker-compose.yaml
+
 # Python
 __pycache__/
 *.py[cod]
