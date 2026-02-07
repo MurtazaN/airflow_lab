@@ -29,7 +29,7 @@ default_args = {
     "retries": 0,
 }
 
-# ---------- DAG ----------
+# ---------- DAG Instance ----------
 dag = DAG(
     dag_id="Airflow_Lab2",
     default_args=default_args,
@@ -41,7 +41,7 @@ dag = DAG(
     max_active_runs=1,
 )
 
-# ---------- Tasks ----------
+# ---------- DAG Tasks ----------
 owner_task = BashOperator(
     task_id="task_using_linked_owner",
     bash_command="echo 1",
@@ -51,7 +51,7 @@ owner_task = BashOperator(
 
 send_email = EmailOperator(
     task_id="send_email",
-    to="rey.mhmmd@gmail.com",
+    to="murtaza.sn786@gmail.com",
     subject="Notification from Airflow",
     html_content="<p>This is a notification email sent from Airflow.</p>",
     dag=dag,
@@ -102,7 +102,7 @@ trigger_dag_task = TriggerDagRunOperator(
     dag=dag,
 )
 
-# ---------- Dependencies ----------
+# ---------- DAG Dependencies ----------
 owner_task >> load_data_task >> data_preprocessing_task >> \
     separate_data_outputs_task >> build_save_model_task >> \
     load_model_task >> trigger_dag_task
