@@ -166,3 +166,171 @@
 [2026-02-07T20:21:17.957+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
 [2026-02-07T20:21:17.970+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
 [2026-02-07T20:21:17.972+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-02-07T20:54:01.703+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-02-07T20:54:01.712+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Airflow_Lab2.task_using_linked_owner scheduled__2026-02-06T00:00:00+00:00 [queued]>
+[2026-02-07T20:54:01.716+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Airflow_Lab2.task_using_linked_owner scheduled__2026-02-06T00:00:00+00:00 [queued]>
+[2026-02-07T20:54:01.716+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2026-02-07T20:54:01.724+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): task_using_linked_owner> on 2026-02-06 00:00:00+00:00
+[2026-02-07T20:54:01.729+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=85) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-02-07T20:54:01.730+0000] {standard_task_runner.py:72} INFO - Started process 95 to run task
+[2026-02-07T20:54:01.731+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'Airflow_Lab2', 'task_using_linked_owner', 'scheduled__2026-02-06T00:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/main.py', '--cfg-path', '/tmp/tmpsy6vq0hh']
+[2026-02-07T20:54:01.733+0000] {standard_task_runner.py:105} INFO - Job 3: Subtask task_using_linked_owner
+[2026-02-07T20:54:01.766+0000] {task_command.py:467} INFO - Running <TaskInstance: Airflow_Lab2.task_using_linked_owner scheduled__2026-02-06T00:00:00+00:00 [running]> on host d5c78800a465
+[2026-02-07T20:54:01.807+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Murtaza Nipplewala' AIRFLOW_CTX_DAG_ID='Airflow_Lab2' AIRFLOW_CTX_TASK_ID='task_using_linked_owner' AIRFLOW_CTX_EXECUTION_DATE='2026-02-06T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-02-06T00:00:00+00:00'
+[2026-02-07T20:54:01.808+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-02-07T20:54:01.826+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-02-07T20:54:01.827+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'echo 1']
+[2026-02-07T20:54:01.835+0000] {subprocess.py:86} INFO - Output:
+[2026-02-07T20:54:01.836+0000] {subprocess.py:93} INFO - 1
+[2026-02-07T20:54:01.836+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-02-07T20:54:01.849+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-02-07T20:54:01.850+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=Airflow_Lab2, task_id=task_using_linked_owner, run_id=scheduled__2026-02-06T00:00:00+00:00, execution_date=20260206T000000, start_date=20260207T205401, end_date=20260207T205401
+[2026-02-07T20:54:01.872+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-02-07T20:54:01.886+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-02-07T20:54:01.886+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-02-07T21:03:24.899+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-02-07T21:03:24.908+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Airflow_Lab2.task_using_linked_owner scheduled__2026-02-06T00:00:00+00:00 [queued]>
+[2026-02-07T21:03:24.912+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Airflow_Lab2.task_using_linked_owner scheduled__2026-02-06T00:00:00+00:00 [queued]>
+[2026-02-07T21:03:24.912+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2026-02-07T21:03:24.919+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): task_using_linked_owner> on 2026-02-06 00:00:00+00:00
+[2026-02-07T21:03:24.924+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=78) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-02-07T21:03:24.925+0000] {standard_task_runner.py:72} INFO - Started process 88 to run task
+[2026-02-07T21:03:24.925+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'Airflow_Lab2', 'task_using_linked_owner', 'scheduled__2026-02-06T00:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/main.py', '--cfg-path', '/tmp/tmpemh89tyk']
+[2026-02-07T21:03:24.927+0000] {standard_task_runner.py:105} INFO - Job 3: Subtask task_using_linked_owner
+[2026-02-07T21:03:24.956+0000] {task_command.py:467} INFO - Running <TaskInstance: Airflow_Lab2.task_using_linked_owner scheduled__2026-02-06T00:00:00+00:00 [running]> on host f1e3a507a566
+[2026-02-07T21:03:24.999+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Murtaza Nipplewala' AIRFLOW_CTX_DAG_ID='Airflow_Lab2' AIRFLOW_CTX_TASK_ID='task_using_linked_owner' AIRFLOW_CTX_EXECUTION_DATE='2026-02-06T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-02-06T00:00:00+00:00'
+[2026-02-07T21:03:25.000+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-02-07T21:03:25.018+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-02-07T21:03:25.018+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'echo 1']
+[2026-02-07T21:03:25.027+0000] {subprocess.py:86} INFO - Output:
+[2026-02-07T21:03:25.028+0000] {subprocess.py:93} INFO - 1
+[2026-02-07T21:03:25.029+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-02-07T21:03:25.042+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-02-07T21:03:25.043+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=Airflow_Lab2, task_id=task_using_linked_owner, run_id=scheduled__2026-02-06T00:00:00+00:00, execution_date=20260206T000000, start_date=20260207T210324, end_date=20260207T210325
+[2026-02-07T21:03:25.064+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-02-07T21:03:25.079+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-02-07T21:03:25.080+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-02-07T21:07:04.829+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-02-07T21:07:04.836+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Airflow_Lab2.task_using_linked_owner scheduled__2026-02-06T00:00:00+00:00 [queued]>
+[2026-02-07T21:07:04.840+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Airflow_Lab2.task_using_linked_owner scheduled__2026-02-06T00:00:00+00:00 [queued]>
+[2026-02-07T21:07:04.840+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2026-02-07T21:07:04.845+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): task_using_linked_owner> on 2026-02-06 00:00:00+00:00
+[2026-02-07T21:07:04.850+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=63) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-02-07T21:07:04.852+0000] {standard_task_runner.py:72} INFO - Started process 73 to run task
+[2026-02-07T21:07:04.851+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'Airflow_Lab2', 'task_using_linked_owner', 'scheduled__2026-02-06T00:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/main.py', '--cfg-path', '/tmp/tmpcw0nx4ti']
+[2026-02-07T21:07:04.853+0000] {standard_task_runner.py:105} INFO - Job 3: Subtask task_using_linked_owner
+[2026-02-07T21:07:04.882+0000] {task_command.py:467} INFO - Running <TaskInstance: Airflow_Lab2.task_using_linked_owner scheduled__2026-02-06T00:00:00+00:00 [running]> on host d0ebec898cbf
+[2026-02-07T21:07:04.923+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Murtaza Nipplewala' AIRFLOW_CTX_DAG_ID='Airflow_Lab2' AIRFLOW_CTX_TASK_ID='task_using_linked_owner' AIRFLOW_CTX_EXECUTION_DATE='2026-02-06T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-02-06T00:00:00+00:00'
+[2026-02-07T21:07:04.924+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-02-07T21:07:04.941+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-02-07T21:07:04.942+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'echo 1']
+[2026-02-07T21:07:04.949+0000] {subprocess.py:86} INFO - Output:
+[2026-02-07T21:07:04.950+0000] {subprocess.py:93} INFO - 1
+[2026-02-07T21:07:04.950+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-02-07T21:07:04.963+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-02-07T21:07:04.964+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=Airflow_Lab2, task_id=task_using_linked_owner, run_id=scheduled__2026-02-06T00:00:00+00:00, execution_date=20260206T000000, start_date=20260207T210704, end_date=20260207T210704
+[2026-02-07T21:07:04.991+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-02-07T21:07:05.006+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-02-07T21:07:05.007+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-02-07T21:22:40.653+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-02-07T21:22:40.660+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Airflow_Lab2.task_using_linked_owner scheduled__2026-02-06T00:00:00+00:00 [queued]>
+[2026-02-07T21:22:40.663+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Airflow_Lab2.task_using_linked_owner scheduled__2026-02-06T00:00:00+00:00 [queued]>
+[2026-02-07T21:22:40.664+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2026-02-07T21:22:40.669+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): task_using_linked_owner> on 2026-02-06 00:00:00+00:00
+[2026-02-07T21:22:40.674+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=63) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-02-07T21:22:40.675+0000] {standard_task_runner.py:72} INFO - Started process 73 to run task
+[2026-02-07T21:22:40.676+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'Airflow_Lab2', 'task_using_linked_owner', 'scheduled__2026-02-06T00:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/main.py', '--cfg-path', '/tmp/tmpxr9cqo1x']
+[2026-02-07T21:22:40.678+0000] {standard_task_runner.py:105} INFO - Job 3: Subtask task_using_linked_owner
+[2026-02-07T21:22:40.701+0000] {task_command.py:467} INFO - Running <TaskInstance: Airflow_Lab2.task_using_linked_owner scheduled__2026-02-06T00:00:00+00:00 [running]> on host c2a606d02197
+[2026-02-07T21:22:40.737+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Murtaza Nipplewala' AIRFLOW_CTX_DAG_ID='Airflow_Lab2' AIRFLOW_CTX_TASK_ID='task_using_linked_owner' AIRFLOW_CTX_EXECUTION_DATE='2026-02-06T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-02-06T00:00:00+00:00'
+[2026-02-07T21:22:40.738+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-02-07T21:22:40.756+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-02-07T21:22:40.756+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'echo 1']
+[2026-02-07T21:22:40.763+0000] {subprocess.py:86} INFO - Output:
+[2026-02-07T21:22:40.764+0000] {subprocess.py:93} INFO - 1
+[2026-02-07T21:22:40.764+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-02-07T21:22:40.777+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-02-07T21:22:40.778+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=Airflow_Lab2, task_id=task_using_linked_owner, run_id=scheduled__2026-02-06T00:00:00+00:00, execution_date=20260206T000000, start_date=20260207T212240, end_date=20260207T212240
+[2026-02-07T21:22:40.816+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-02-07T21:22:40.829+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-02-07T21:22:40.830+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-02-07T21:28:57.276+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-02-07T21:28:57.284+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Airflow_Lab2.task_using_linked_owner scheduled__2026-02-06T00:00:00+00:00 [queued]>
+[2026-02-07T21:28:57.287+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Airflow_Lab2.task_using_linked_owner scheduled__2026-02-06T00:00:00+00:00 [queued]>
+[2026-02-07T21:28:57.287+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2026-02-07T21:28:57.292+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): task_using_linked_owner> on 2026-02-06 00:00:00+00:00
+[2026-02-07T21:28:57.298+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=64) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-02-07T21:28:57.299+0000] {standard_task_runner.py:72} INFO - Started process 74 to run task
+[2026-02-07T21:28:57.299+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'Airflow_Lab2', 'task_using_linked_owner', 'scheduled__2026-02-06T00:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/main.py', '--cfg-path', '/tmp/tmpghma1cb3']
+[2026-02-07T21:28:57.301+0000] {standard_task_runner.py:105} INFO - Job 3: Subtask task_using_linked_owner
+[2026-02-07T21:28:57.330+0000] {task_command.py:467} INFO - Running <TaskInstance: Airflow_Lab2.task_using_linked_owner scheduled__2026-02-06T00:00:00+00:00 [running]> on host ae069f5c53d3
+[2026-02-07T21:28:57.367+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Murtaza Nipplewala' AIRFLOW_CTX_DAG_ID='Airflow_Lab2' AIRFLOW_CTX_TASK_ID='task_using_linked_owner' AIRFLOW_CTX_EXECUTION_DATE='2026-02-06T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-02-06T00:00:00+00:00'
+[2026-02-07T21:28:57.368+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-02-07T21:28:57.386+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-02-07T21:28:57.387+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'echo 1']
+[2026-02-07T21:28:57.396+0000] {subprocess.py:86} INFO - Output:
+[2026-02-07T21:28:57.397+0000] {subprocess.py:93} INFO - 1
+[2026-02-07T21:28:57.397+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-02-07T21:28:57.411+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-02-07T21:28:57.411+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=Airflow_Lab2, task_id=task_using_linked_owner, run_id=scheduled__2026-02-06T00:00:00+00:00, execution_date=20260206T000000, start_date=20260207T212857, end_date=20260207T212857
+[2026-02-07T21:28:57.439+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-02-07T21:28:57.454+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-02-07T21:28:57.455+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-02-07T22:03:34.619+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-02-07T22:03:34.626+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Airflow_Lab2.task_using_linked_owner scheduled__2026-02-06T00:00:00+00:00 [queued]>
+[2026-02-07T22:03:34.630+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Airflow_Lab2.task_using_linked_owner scheduled__2026-02-06T00:00:00+00:00 [queued]>
+[2026-02-07T22:03:34.630+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2026-02-07T22:03:34.636+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): task_using_linked_owner> on 2026-02-06 00:00:00+00:00
+[2026-02-07T22:03:34.640+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=77) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-02-07T22:03:34.641+0000] {standard_task_runner.py:72} INFO - Started process 87 to run task
+[2026-02-07T22:03:34.641+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'Airflow_Lab2', 'task_using_linked_owner', 'scheduled__2026-02-06T00:00:00+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/main.py', '--cfg-path', '/tmp/tmp7__7hovq']
+[2026-02-07T22:03:34.643+0000] {standard_task_runner.py:105} INFO - Job 6: Subtask task_using_linked_owner
+[2026-02-07T22:03:34.672+0000] {task_command.py:467} INFO - Running <TaskInstance: Airflow_Lab2.task_using_linked_owner scheduled__2026-02-06T00:00:00+00:00 [running]> on host 6bd310ee7171
+[2026-02-07T22:03:34.710+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Murtaza Nipplewala' AIRFLOW_CTX_DAG_ID='Airflow_Lab2' AIRFLOW_CTX_TASK_ID='task_using_linked_owner' AIRFLOW_CTX_EXECUTION_DATE='2026-02-06T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-02-06T00:00:00+00:00'
+[2026-02-07T22:03:34.711+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-02-07T22:03:34.728+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-02-07T22:03:34.729+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'echo 1']
+[2026-02-07T22:03:34.735+0000] {subprocess.py:86} INFO - Output:
+[2026-02-07T22:03:34.736+0000] {subprocess.py:93} INFO - 1
+[2026-02-07T22:03:34.736+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-02-07T22:03:34.748+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-02-07T22:03:34.749+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=Airflow_Lab2, task_id=task_using_linked_owner, run_id=scheduled__2026-02-06T00:00:00+00:00, execution_date=20260206T000000, start_date=20260207T220334, end_date=20260207T220334
+[2026-02-07T22:03:34.781+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-02-07T22:03:34.794+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-02-07T22:03:34.795+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-02-07T22:05:53.609+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-02-07T22:05:53.617+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Airflow_Lab2.task_using_linked_owner scheduled__2026-02-06T00:00:00+00:00 [queued]>
+[2026-02-07T22:05:53.621+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Airflow_Lab2.task_using_linked_owner scheduled__2026-02-06T00:00:00+00:00 [queued]>
+[2026-02-07T22:05:53.621+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2026-02-07T22:05:53.627+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): task_using_linked_owner> on 2026-02-06 00:00:00+00:00
+[2026-02-07T22:05:53.632+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=65) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-02-07T22:05:53.634+0000] {standard_task_runner.py:72} INFO - Started process 75 to run task
+[2026-02-07T22:05:53.634+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'Airflow_Lab2', 'task_using_linked_owner', 'scheduled__2026-02-06T00:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/main.py', '--cfg-path', '/tmp/tmpaldiq6lz']
+[2026-02-07T22:05:53.636+0000] {standard_task_runner.py:105} INFO - Job 3: Subtask task_using_linked_owner
+[2026-02-07T22:05:53.700+0000] {task_command.py:467} INFO - Running <TaskInstance: Airflow_Lab2.task_using_linked_owner scheduled__2026-02-06T00:00:00+00:00 [running]> on host eb9540dc5e5e
+[2026-02-07T22:05:53.743+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Murtaza Nipplewala' AIRFLOW_CTX_DAG_ID='Airflow_Lab2' AIRFLOW_CTX_TASK_ID='task_using_linked_owner' AIRFLOW_CTX_EXECUTION_DATE='2026-02-06T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-02-06T00:00:00+00:00'
+[2026-02-07T22:05:53.744+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-02-07T22:05:53.763+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-02-07T22:05:53.763+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'echo 1']
+[2026-02-07T22:05:53.771+0000] {subprocess.py:86} INFO - Output:
+[2026-02-07T22:05:53.772+0000] {subprocess.py:93} INFO - 1
+[2026-02-07T22:05:53.772+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-02-07T22:05:53.788+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-02-07T22:05:53.788+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=Airflow_Lab2, task_id=task_using_linked_owner, run_id=scheduled__2026-02-06T00:00:00+00:00, execution_date=20260206T000000, start_date=20260207T220553, end_date=20260207T220553
+[2026-02-07T22:05:53.815+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-02-07T22:05:53.830+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-02-07T22:05:53.831+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

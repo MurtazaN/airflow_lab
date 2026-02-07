@@ -70,14 +70,14 @@ x-airflow-common:
     AIRFLOW__API__AUTH_BACKENDS: 'airflow.api.auth.backend.basic_auth,airflow.api.auth.backend.session'
     # SMTP settings via Airflow config (used by send_email_smtp)
     AIRFLOW__SMTP__SMTP_HOST: 'smtp.gmail.com'
-    AIRFLOW__SMTP__SMTP_PORT: '465'
     AIRFLOW__SMTP__SMTP_USER: 'murtaza.sn786@gmail.com'
-    AIRFLOW__SMTP__SMTP_PASSWORD: 'qlep vngv fmgg zlkz'
+    AIRFLOW__SMTP__SMTP_PASSWORD: 'qlepvngvfmggzlkz'
     AIRFLOW__SMTP__SMTP_MAIL_FROM: 'murtaza.sn786@gmail.com'
     AIRFLOW__SMTP__SMTP_SSL: 'True'
     AIRFLOW__SMTP__SMTP_STARTTLS: 'False'
-    # SMTP connection for EmailOperator (JSON format)
-    AIRFLOW_CONN_SMTP_DEFAULT: '{"conn_type": "smtp", "host": "smtp.gmail.com", "port": 465, "login": "murtaza.sn786@gmail.com", "password": "qlep vngv fmgg zlkz", "extra": {"smtp_ssl": true, "smtp_starttls": false}}'
+    AIRFLOW__SMTP__SMTP_PORT: '465'
+    # SMTP connection for EmailOperator using JSON format with correct parameter names
+    AIRFLOW_CONN_SMTP_DEFAULT: '{"conn_type": "smtp", "host": "smtp.gmail.com", "port": 465, "login": "murtaza.sn786@gmail.com", "password": "qlepvngvfmggzlkz", "extra": {"from_email": "murtaza.sn786@gmail.com", "disable_ssl": false, "disable_tls": true}}'
     # Use simple http server on scheduler for health checks
     # See https://airflow.apache.org/docs/apache-airflow/stable/administration-and-deployment/logging-monitoring/check-health.html#scheduler-health-check-server
     # yamllint enable rule:line-length

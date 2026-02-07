@@ -138,3 +138,143 @@
 [2026-02-07T20:21:21.886+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
 [2026-02-07T20:21:21.900+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
 [2026-02-07T20:21:21.901+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-02-07T20:54:05.040+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-02-07T20:54:05.049+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Airflow_Lab2.separate_data_outputs_task scheduled__2026-02-06T00:00:00+00:00 [queued]>
+[2026-02-07T20:54:05.053+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Airflow_Lab2.separate_data_outputs_task scheduled__2026-02-06T00:00:00+00:00 [queued]>
+[2026-02-07T20:54:05.053+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2026-02-07T20:54:05.059+0000] {taskinstance.py:2888} INFO - Executing <Task(PythonOperator): separate_data_outputs_task> on 2026-02-06 00:00:00+00:00
+[2026-02-07T20:54:05.063+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=122) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-02-07T20:54:05.064+0000] {standard_task_runner.py:72} INFO - Started process 132 to run task
+[2026-02-07T20:54:05.064+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'Airflow_Lab2', 'separate_data_outputs_task', 'scheduled__2026-02-06T00:00:00+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/main.py', '--cfg-path', '/tmp/tmp_jtl9o2q']
+[2026-02-07T20:54:05.066+0000] {standard_task_runner.py:105} INFO - Job 6: Subtask separate_data_outputs_task
+[2026-02-07T20:54:05.090+0000] {task_command.py:467} INFO - Running <TaskInstance: Airflow_Lab2.separate_data_outputs_task scheduled__2026-02-06T00:00:00+00:00 [running]> on host d5c78800a465
+[2026-02-07T20:54:05.129+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Airflow_Lab2' AIRFLOW_CTX_TASK_ID='separate_data_outputs_task' AIRFLOW_CTX_EXECUTION_DATE='2026-02-06T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-02-06T00:00:00+00:00'
+[2026-02-07T20:54:05.129+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-02-07T20:54:05.136+0000] {python.py:240} INFO - Done. Returned value was: /opt/***/working_data/preprocessed.pkl
+[2026-02-07T20:54:05.145+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-02-07T20:54:05.145+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=Airflow_Lab2, task_id=separate_data_outputs_task, run_id=scheduled__2026-02-06T00:00:00+00:00, execution_date=20260206T000000, start_date=20260207T205405, end_date=20260207T205405
+[2026-02-07T20:54:05.162+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-02-07T20:54:05.175+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-02-07T20:54:05.176+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-02-07T21:03:29.960+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-02-07T21:03:29.971+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Airflow_Lab2.separate_data_outputs_task scheduled__2026-02-06T00:00:00+00:00 [queued]>
+[2026-02-07T21:03:29.977+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Airflow_Lab2.separate_data_outputs_task scheduled__2026-02-06T00:00:00+00:00 [queued]>
+[2026-02-07T21:03:29.977+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2026-02-07T21:03:29.986+0000] {taskinstance.py:2888} INFO - Executing <Task(PythonOperator): separate_data_outputs_task> on 2026-02-06 00:00:00+00:00
+[2026-02-07T21:03:30.000+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=115) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-02-07T21:03:30.003+0000] {standard_task_runner.py:72} INFO - Started process 125 to run task
+[2026-02-07T21:03:30.017+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'Airflow_Lab2', 'separate_data_outputs_task', 'scheduled__2026-02-06T00:00:00+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/main.py', '--cfg-path', '/tmp/tmpk2deyp00']
+[2026-02-07T21:03:30.023+0000] {standard_task_runner.py:105} INFO - Job 6: Subtask separate_data_outputs_task
+[2026-02-07T21:03:30.058+0000] {task_command.py:467} INFO - Running <TaskInstance: Airflow_Lab2.separate_data_outputs_task scheduled__2026-02-06T00:00:00+00:00 [running]> on host f1e3a507a566
+[2026-02-07T21:03:30.111+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Airflow_Lab2' AIRFLOW_CTX_TASK_ID='separate_data_outputs_task' AIRFLOW_CTX_EXECUTION_DATE='2026-02-06T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-02-06T00:00:00+00:00'
+[2026-02-07T21:03:30.113+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-02-07T21:03:30.122+0000] {python.py:240} INFO - Done. Returned value was: /opt/***/working_data/preprocessed.pkl
+[2026-02-07T21:03:30.135+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-02-07T21:03:30.135+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=Airflow_Lab2, task_id=separate_data_outputs_task, run_id=scheduled__2026-02-06T00:00:00+00:00, execution_date=20260206T000000, start_date=20260207T210329, end_date=20260207T210330
+[2026-02-07T21:03:30.161+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-02-07T21:03:30.175+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-02-07T21:03:30.176+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-02-07T21:07:08.600+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-02-07T21:07:08.609+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Airflow_Lab2.separate_data_outputs_task scheduled__2026-02-06T00:00:00+00:00 [queued]>
+[2026-02-07T21:07:08.613+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Airflow_Lab2.separate_data_outputs_task scheduled__2026-02-06T00:00:00+00:00 [queued]>
+[2026-02-07T21:07:08.613+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2026-02-07T21:07:08.620+0000] {taskinstance.py:2888} INFO - Executing <Task(PythonOperator): separate_data_outputs_task> on 2026-02-06 00:00:00+00:00
+[2026-02-07T21:07:08.625+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=100) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-02-07T21:07:08.626+0000] {standard_task_runner.py:72} INFO - Started process 110 to run task
+[2026-02-07T21:07:08.626+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'Airflow_Lab2', 'separate_data_outputs_task', 'scheduled__2026-02-06T00:00:00+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/main.py', '--cfg-path', '/tmp/tmp07zx8den']
+[2026-02-07T21:07:08.628+0000] {standard_task_runner.py:105} INFO - Job 6: Subtask separate_data_outputs_task
+[2026-02-07T21:07:08.654+0000] {task_command.py:467} INFO - Running <TaskInstance: Airflow_Lab2.separate_data_outputs_task scheduled__2026-02-06T00:00:00+00:00 [running]> on host d0ebec898cbf
+[2026-02-07T21:07:08.699+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Airflow_Lab2' AIRFLOW_CTX_TASK_ID='separate_data_outputs_task' AIRFLOW_CTX_EXECUTION_DATE='2026-02-06T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-02-06T00:00:00+00:00'
+[2026-02-07T21:07:08.699+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-02-07T21:07:08.706+0000] {python.py:240} INFO - Done. Returned value was: /opt/***/working_data/preprocessed.pkl
+[2026-02-07T21:07:08.717+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-02-07T21:07:08.718+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=Airflow_Lab2, task_id=separate_data_outputs_task, run_id=scheduled__2026-02-06T00:00:00+00:00, execution_date=20260206T000000, start_date=20260207T210708, end_date=20260207T210708
+[2026-02-07T21:07:08.727+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-02-07T21:07:08.742+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-02-07T21:07:08.743+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-02-07T21:22:46.363+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-02-07T21:22:46.372+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Airflow_Lab2.separate_data_outputs_task scheduled__2026-02-06T00:00:00+00:00 [queued]>
+[2026-02-07T21:22:46.376+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Airflow_Lab2.separate_data_outputs_task scheduled__2026-02-06T00:00:00+00:00 [queued]>
+[2026-02-07T21:22:46.377+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2026-02-07T21:22:46.383+0000] {taskinstance.py:2888} INFO - Executing <Task(PythonOperator): separate_data_outputs_task> on 2026-02-06 00:00:00+00:00
+[2026-02-07T21:22:46.387+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=107) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-02-07T21:22:46.388+0000] {standard_task_runner.py:72} INFO - Started process 117 to run task
+[2026-02-07T21:22:46.389+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'Airflow_Lab2', 'separate_data_outputs_task', 'scheduled__2026-02-06T00:00:00+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/main.py', '--cfg-path', '/tmp/tmp7cfts8c3']
+[2026-02-07T21:22:46.391+0000] {standard_task_runner.py:105} INFO - Job 6: Subtask separate_data_outputs_task
+[2026-02-07T21:22:46.414+0000] {task_command.py:467} INFO - Running <TaskInstance: Airflow_Lab2.separate_data_outputs_task scheduled__2026-02-06T00:00:00+00:00 [running]> on host c2a606d02197
+[2026-02-07T21:22:46.455+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Airflow_Lab2' AIRFLOW_CTX_TASK_ID='separate_data_outputs_task' AIRFLOW_CTX_EXECUTION_DATE='2026-02-06T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-02-06T00:00:00+00:00'
+[2026-02-07T21:22:46.456+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-02-07T21:22:46.462+0000] {python.py:240} INFO - Done. Returned value was: /opt/***/working_data/preprocessed.pkl
+[2026-02-07T21:22:46.473+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-02-07T21:22:46.473+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=Airflow_Lab2, task_id=separate_data_outputs_task, run_id=scheduled__2026-02-06T00:00:00+00:00, execution_date=20260206T000000, start_date=20260207T212246, end_date=20260207T212246
+[2026-02-07T21:22:46.485+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-02-07T21:22:46.499+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-02-07T21:22:46.500+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-02-07T21:29:00.957+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-02-07T21:29:00.965+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Airflow_Lab2.separate_data_outputs_task scheduled__2026-02-06T00:00:00+00:00 [queued]>
+[2026-02-07T21:29:00.968+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Airflow_Lab2.separate_data_outputs_task scheduled__2026-02-06T00:00:00+00:00 [queued]>
+[2026-02-07T21:29:00.969+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2026-02-07T21:29:00.973+0000] {taskinstance.py:2888} INFO - Executing <Task(PythonOperator): separate_data_outputs_task> on 2026-02-06 00:00:00+00:00
+[2026-02-07T21:29:00.978+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=101) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-02-07T21:29:00.979+0000] {standard_task_runner.py:72} INFO - Started process 111 to run task
+[2026-02-07T21:29:00.979+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'Airflow_Lab2', 'separate_data_outputs_task', 'scheduled__2026-02-06T00:00:00+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/main.py', '--cfg-path', '/tmp/tmpzdzptsk1']
+[2026-02-07T21:29:00.981+0000] {standard_task_runner.py:105} INFO - Job 6: Subtask separate_data_outputs_task
+[2026-02-07T21:29:01.003+0000] {task_command.py:467} INFO - Running <TaskInstance: Airflow_Lab2.separate_data_outputs_task scheduled__2026-02-06T00:00:00+00:00 [running]> on host ae069f5c53d3
+[2026-02-07T21:29:01.045+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Airflow_Lab2' AIRFLOW_CTX_TASK_ID='separate_data_outputs_task' AIRFLOW_CTX_EXECUTION_DATE='2026-02-06T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-02-06T00:00:00+00:00'
+[2026-02-07T21:29:01.046+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-02-07T21:29:01.053+0000] {python.py:240} INFO - Done. Returned value was: /opt/***/working_data/preprocessed.pkl
+[2026-02-07T21:29:01.063+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-02-07T21:29:01.063+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=Airflow_Lab2, task_id=separate_data_outputs_task, run_id=scheduled__2026-02-06T00:00:00+00:00, execution_date=20260206T000000, start_date=20260207T212900, end_date=20260207T212901
+[2026-02-07T21:29:01.077+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-02-07T21:29:01.090+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-02-07T21:29:01.091+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-02-07T22:03:38.456+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-02-07T22:03:38.465+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Airflow_Lab2.separate_data_outputs_task scheduled__2026-02-06T00:00:00+00:00 [queued]>
+[2026-02-07T22:03:38.469+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Airflow_Lab2.separate_data_outputs_task scheduled__2026-02-06T00:00:00+00:00 [queued]>
+[2026-02-07T22:03:38.469+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2026-02-07T22:03:38.475+0000] {taskinstance.py:2888} INFO - Executing <Task(PythonOperator): separate_data_outputs_task> on 2026-02-06 00:00:00+00:00
+[2026-02-07T22:03:38.480+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=114) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-02-07T22:03:38.481+0000] {standard_task_runner.py:72} INFO - Started process 124 to run task
+[2026-02-07T22:03:38.481+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'Airflow_Lab2', 'separate_data_outputs_task', 'scheduled__2026-02-06T00:00:00+00:00', '--job-id', '9', '--raw', '--subdir', 'DAGS_FOLDER/main.py', '--cfg-path', '/tmp/tmpc88at9u_']
+[2026-02-07T22:03:38.483+0000] {standard_task_runner.py:105} INFO - Job 9: Subtask separate_data_outputs_task
+[2026-02-07T22:03:38.510+0000] {task_command.py:467} INFO - Running <TaskInstance: Airflow_Lab2.separate_data_outputs_task scheduled__2026-02-06T00:00:00+00:00 [running]> on host 6bd310ee7171
+[2026-02-07T22:03:38.554+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Airflow_Lab2' AIRFLOW_CTX_TASK_ID='separate_data_outputs_task' AIRFLOW_CTX_EXECUTION_DATE='2026-02-06T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-02-06T00:00:00+00:00'
+[2026-02-07T22:03:38.555+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-02-07T22:03:38.561+0000] {python.py:240} INFO - Done. Returned value was: /opt/***/working_data/preprocessed.pkl
+[2026-02-07T22:03:38.573+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-02-07T22:03:38.573+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=Airflow_Lab2, task_id=separate_data_outputs_task, run_id=scheduled__2026-02-06T00:00:00+00:00, execution_date=20260206T000000, start_date=20260207T220338, end_date=20260207T220338
+[2026-02-07T22:03:38.623+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-02-07T22:03:38.637+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-02-07T22:03:38.638+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-02-07T22:05:57.518+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-02-07T22:05:57.526+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Airflow_Lab2.separate_data_outputs_task scheduled__2026-02-06T00:00:00+00:00 [queued]>
+[2026-02-07T22:05:57.530+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Airflow_Lab2.separate_data_outputs_task scheduled__2026-02-06T00:00:00+00:00 [queued]>
+[2026-02-07T22:05:57.530+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2026-02-07T22:05:57.535+0000] {taskinstance.py:2888} INFO - Executing <Task(PythonOperator): separate_data_outputs_task> on 2026-02-06 00:00:00+00:00
+[2026-02-07T22:05:57.539+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=102) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-02-07T22:05:57.540+0000] {standard_task_runner.py:72} INFO - Started process 112 to run task
+[2026-02-07T22:05:57.540+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'Airflow_Lab2', 'separate_data_outputs_task', 'scheduled__2026-02-06T00:00:00+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/main.py', '--cfg-path', '/tmp/tmp0gqm7nhx']
+[2026-02-07T22:05:57.542+0000] {standard_task_runner.py:105} INFO - Job 6: Subtask separate_data_outputs_task
+[2026-02-07T22:05:57.567+0000] {task_command.py:467} INFO - Running <TaskInstance: Airflow_Lab2.separate_data_outputs_task scheduled__2026-02-06T00:00:00+00:00 [running]> on host eb9540dc5e5e
+[2026-02-07T22:05:57.609+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Airflow_Lab2' AIRFLOW_CTX_TASK_ID='separate_data_outputs_task' AIRFLOW_CTX_EXECUTION_DATE='2026-02-06T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-02-06T00:00:00+00:00'
+[2026-02-07T22:05:57.609+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-02-07T22:05:57.617+0000] {python.py:240} INFO - Done. Returned value was: /opt/***/working_data/preprocessed.pkl
+[2026-02-07T22:05:57.627+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-02-07T22:05:57.627+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=Airflow_Lab2, task_id=separate_data_outputs_task, run_id=scheduled__2026-02-06T00:00:00+00:00, execution_date=20260206T000000, start_date=20260207T220557, end_date=20260207T220557
+[2026-02-07T22:05:57.639+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-02-07T22:05:57.653+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-02-07T22:05:57.653+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

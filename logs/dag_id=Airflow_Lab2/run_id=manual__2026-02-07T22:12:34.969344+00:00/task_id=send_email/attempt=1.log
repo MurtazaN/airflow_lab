@@ -1,0 +1,21 @@
+[2026-02-07T22:12:48.067+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-02-07T22:12:48.077+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Airflow_Lab2.send_email manual__2026-02-07T22:12:34.969344+00:00 [queued]>
+[2026-02-07T22:12:48.081+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Airflow_Lab2.send_email manual__2026-02-07T22:12:34.969344+00:00 [queued]>
+[2026-02-07T22:12:48.081+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2026-02-07T22:12:48.087+0000] {taskinstance.py:2888} INFO - Executing <Task(EmailOperator): send_email> on 2026-02-07 22:12:34.969344+00:00
+[2026-02-07T22:12:48.091+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=210) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-02-07T22:12:48.093+0000] {standard_task_runner.py:72} INFO - Started process 230 to run task
+[2026-02-07T22:12:48.093+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'Airflow_Lab2', 'send_email', 'manual__2026-02-07T22:12:34.969344+00:00', '--job-id', '22', '--raw', '--subdir', 'DAGS_FOLDER/main.py', '--cfg-path', '/tmp/tmpt3mccw4z']
+[2026-02-07T22:12:48.095+0000] {standard_task_runner.py:105} INFO - Job 22: Subtask send_email
+[2026-02-07T22:12:48.124+0000] {task_command.py:467} INFO - Running <TaskInstance: Airflow_Lab2.send_email manual__2026-02-07T22:12:34.969344+00:00 [running]> on host 2dc25f8078bb
+[2026-02-07T22:12:48.167+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Airflow_Lab2' AIRFLOW_CTX_TASK_ID='send_email' AIRFLOW_CTX_EXECUTION_DATE='2026-02-07T22:12:34.969344+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-02-07T22:12:34.969344+00:00'
+[2026-02-07T22:12:48.169+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-02-07T22:12:48.178+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2026-02-07T22:12:48.179+0000] {base.py:84} INFO - Retrieving connection 'smtp_default'
+[2026-02-07T22:12:49.017+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-02-07T22:12:49.018+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=Airflow_Lab2, task_id=send_email, run_id=manual__2026-02-07T22:12:34.969344+00:00, execution_date=20260207T221234, start_date=20260207T221248, end_date=20260207T221249
+[2026-02-07T22:12:49.034+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-02-07T22:12:49.045+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-02-07T22:12:49.046+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

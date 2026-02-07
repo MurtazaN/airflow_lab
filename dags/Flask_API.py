@@ -11,11 +11,17 @@ from airflow.operators.python import PythonOperator
 # from airflow.providers.standard.operators.python import PythonOperator
 from flask import Flask, redirect, render_template
 
-# ---------- Config (Airflow 3: use REST with Basic Auth via FAB API backend) ----------
-WEBSERVER = os.getenv("AIRFLOW_WEBSERVER", "http://airflow-apiserver:8080")
+# ---------- Config (Airflow 2.x: use REST with Basic Auth) ----------
+WEBSERVER = os.getenv("AIRFLOW_WEBSERVER", "http://airflow-webserver:8080")
 AF_USER   = os.getenv("AIRFLOW_USERNAME", os.getenv("_AIRFLOW_WWW_USER_USERNAME", "airflow-lab2"))
 AF_PASS   = os.getenv("AIRFLOW_PASSWORD", os.getenv("_AIRFLOW_WWW_USER_PASSWORD", "airflow-lab2"))
 TARGET_DAG_ID = os.getenv("TARGET_DAG_ID", "Airflow_Lab2")
+
+# # ---------- Config (Airflow 3: use REST with Basic Auth via FAB API backend) ----------
+# WEBSERVER = os.getenv("AIRFLOW_WEBSERVER", "http://airflow-apiserver:8080")
+# AF_USER   = os.getenv("AIRFLOW_USERNAME", os.getenv("_AIRFLOW_WWW_USER_USERNAME", "airflow-lab2"))
+# AF_PASS   = os.getenv("AIRFLOW_PASSWORD", os.getenv("_AIRFLOW_WWW_USER_PASSWORD", "airflow-lab2"))
+# TARGET_DAG_ID = os.getenv("TARGET_DAG_ID", "Airflow_Lab2")
 
 # ---------- Default args ----------
 default_args = {
@@ -28,11 +34,13 @@ app = Flask(__name__, template_folder="templates")
 
 def get_latest_run_info():
     """
-    Query Airflow stable REST API (/api/v2) using Basic Auth.
-    Requires Airflow to be configured with:
-      AIRFLOW__FAB__AUTH_BACKENDS=airflow.providers.fab.auth_manager.api.auth.backend.basic_auth
+    Query Airflow REST API using Basic Auth.
+    Airflow 2.x uses /api/v1, Airflow 3.x uses /api/v2
     """
-    url = f"{WEBSERVER}/api/v2/dags/{TARGET_DAG_ID}/dagRuns?order_by=-logical_date&limit=1"
+    # Airflow 2.x API
+    url = f"{WEBSERVER}/api/v1/dags/{TARGET_DAG_ID}/dagRuns?order_by=-execution_date&limit=1"
+    # # Airflow 3.x API
+    # url = f"{WEBSERVER}/api/v2/dags/{TARGET_DAG_ID}/dagRuns?order_by=-logical_date&limit=1"
     try:
         r = requests.get(url, auth=(AF_USER, AF_PASS), timeout=5)
     except Exception as e:
