@@ -1,0 +1,47 @@
+{"timestamp":"2026-02-09T17:41:23.020434Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-09T17:41:23.020919Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/main.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-09T17:41:23.970008Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-02-09T17:41:23.970516Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-02-09T17:41:23.970907Z","level":"info","event":"Current task name:my_trigger_task","logger":"task.stdout"}
+{"timestamp":"2026-02-09T17:41:23.971019Z","level":"info","event":"Dag name:Airflow_Lab2","logger":"task.stdout"}
+{"timestamp":"2026-02-09T17:41:24.144995Z","level":"info","event":"Triggering Dag Run.","trigger_dag_id":"Airflow_Lab2_Flask","logger":"task","filename":"task_runner.py","lineno":1210}
+{"timestamp":"2026-02-09T17:41:24.160246Z","level":"info","event":"Dag Run triggered successfully.","trigger_dag_id":"Airflow_Lab2_Flask","logger":"task","filename":"task_runner.py","lineno":1244}
+{"timestamp":"2026-02-09T17:41:24.190245Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-02-09T17:41:24.190560Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-02-09T17:41:24.190666Z","level":"info","event":"Task operator:<Task(TriggerDagRunOperator): my_trigger_task>","logger":"task.stdout"}
+{"timestamp":"2026-02-09T18:00:09.923234Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-09T18:00:09.923709Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/main.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-09T18:00:10.961206Z","level":"info","event":"Triggering Dag Run.","trigger_dag_id":"Airflow_Lab2_Flask","logger":"task","filename":"task_runner.py","lineno":1210}
+{"timestamp":"2026-02-09T18:00:10.979932Z","level":"info","event":"Dag Run triggered successfully.","trigger_dag_id":"Airflow_Lab2_Flask","logger":"task","filename":"task_runner.py","lineno":1244}
+{"timestamp":"2026-02-09T18:10:19.723236Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-09T18:10:19.723730Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/main.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-09T18:10:20.700391Z","level":"info","event":"Triggering Dag Run.","trigger_dag_id":"Airflow_Lab2_Flask","logger":"task","filename":"task_runner.py","lineno":1210}
+{"timestamp":"2026-02-09T18:10:20.720568Z","level":"info","event":"Dag Run triggered successfully.","trigger_dag_id":"Airflow_Lab2_Flask","logger":"task","filename":"task_runner.py","lineno":1244}
+{"timestamp":"2026-02-09T18:13:30.844237Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-09T18:13:30.844724Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/main.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-09T18:13:31.927850Z","level":"info","event":"Triggering Dag Run.","trigger_dag_id":"Airflow_Lab2_Flask","logger":"task","filename":"task_runner.py","lineno":1210}
+{"timestamp":"2026-02-09T18:13:31.946458Z","level":"info","event":"Dag Run triggered successfully.","trigger_dag_id":"Airflow_Lab2_Flask","logger":"task","filename":"task_runner.py","lineno":1244}
+{"timestamp":"2026-02-09T18:39:12.012627Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-09T18:39:12.013142Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/main.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-09T18:39:13.045000Z","level":"info","event":"Triggering Dag Run.","trigger_dag_id":"Airflow_Lab2_Flask","logger":"task","filename":"task_runner.py","lineno":1210}
+{"timestamp":"2026-02-09T18:39:13.064630Z","level":"info","event":"Dag Run triggered successfully.","trigger_dag_id":"Airflow_Lab2_Flask","logger":"task","filename":"task_runner.py","lineno":1244}
+{"timestamp":"2026-02-09T18:43:21.871682Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-09T18:43:21.872193Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/main.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-09T18:43:22.901708Z","level":"info","event":"Triggering Dag Run.","trigger_dag_id":"Airflow_Lab2_Flask","logger":"task","filename":"task_runner.py","lineno":1210}
+{"timestamp":"2026-02-09T18:43:22.919243Z","level":"info","event":"Dag Run triggered successfully.","trigger_dag_id":"Airflow_Lab2_Flask","logger":"task","filename":"task_runner.py","lineno":1244}
+{"timestamp":"2026-02-09T20:06:44.155162Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-09T20:06:44.155724Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/main.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-09T20:06:45.135189Z","level":"info","event":"Triggering Dag Run.","trigger_dag_id":"Airflow_Lab2_Flask","logger":"task","filename":"task_runner.py","lineno":1210}
+{"timestamp":"2026-02-09T20:06:45.154707Z","level":"info","event":"Dag Run triggered successfully.","trigger_dag_id":"Airflow_Lab2_Flask","logger":"task","filename":"task_runner.py","lineno":1244}
+{"timestamp":"2026-02-09T20:24:26.185175Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-09T20:24:26.185573Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/main.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-09T20:24:27.316904Z","level":"info","event":"Triggering Dag Run.","trigger_dag_id":"Airflow_Lab2_Flask","logger":"task","filename":"task_runner.py","lineno":1210}
+{"timestamp":"2026-02-09T20:24:27.334894Z","level":"info","event":"Dag Run triggered successfully.","trigger_dag_id":"Airflow_Lab2_Flask","logger":"task","filename":"task_runner.py","lineno":1244}
+{"timestamp":"2026-02-09T20:39:20.594753Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-09T20:39:20.595183Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/main.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-09T20:39:21.658414Z","level":"info","event":"Triggering Dag Run.","trigger_dag_id":"Airflow_Lab2_Flask","logger":"task","filename":"task_runner.py","lineno":1210}
+{"timestamp":"2026-02-09T20:39:21.681640Z","level":"info","event":"Dag Run triggered successfully.","trigger_dag_id":"Airflow_Lab2_Flask","logger":"task","filename":"task_runner.py","lineno":1244}
+{"timestamp":"2026-02-09T20:54:56.902280Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-09T20:54:56.902671Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/main.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-09T20:54:57.837831Z","level":"info","event":"Triggering Dag Run.","trigger_dag_id":"Airflow_Lab2_Flask","logger":"task","filename":"task_runner.py","lineno":1210}
+{"timestamp":"2026-02-09T20:54:57.857293Z","level":"info","event":"Dag Run triggered successfully.","trigger_dag_id":"Airflow_Lab2_Flask","logger":"task","filename":"task_runner.py","lineno":1244}

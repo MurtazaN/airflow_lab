@@ -3,17 +3,18 @@ from __future__ import annotations
 
 import pendulum
 from airflow import DAG
+# from airflow.operators.bash import BashOperator
+# from airflow.operators.python import PythonOperator
+# from airflow.operators.email import EmailOperator
+# from airflow.operators.trigger_dagrun import TriggerDagRunOperator
+# from airflow.utils.trigger_rule import TriggerRule
 
-# syntax works with Airflow 2.9 and 2.10
-from airflow.operators.python import PythonOperator
-from airflow.operators.bash import BashOperator
-# from airflow.providers.standard.operators.bash import BashOperator
-# from airflow.providers.standard.operators.python import PythonOperator
+from airflow.providers.standard.operators.bash import BashOperator
+from airflow.providers.standard.operators.python import PythonOperator
 from airflow.providers.smtp.operators.smtp import EmailOperator
-# from airflow.providers.standard.operators.trigger_dagrun import TriggerDagRunOperator
-from airflow.operators.trigger_dagrun import TriggerDagRunOperator
-# from airflow.task.trigger_rule import TriggerRule
-from airflow.utils.trigger_rule import TriggerRule
+from airflow.providers.standard.operators.trigger_dagrun import TriggerDagRunOperator
+from airflow.task.trigger_rule import TriggerRule
+
 
 from src.model_development import (
     load_data,
@@ -29,7 +30,7 @@ default_args = {
     "retries": 0,
 }
 
-# ---------- DAG Instance ----------
+# ---------- DAG ----------
 dag = DAG(
     dag_id="Airflow_Lab2",
     default_args=default_args,
@@ -37,15 +38,15 @@ dag = DAG(
     schedule="@daily",
     catchup=False,
     tags=["example"],
-    owner_links={"Murtaza Nipplewala": "https://github.com/MurtazaN/airflow_lab"},
+    owner_links={"Ramin Mohammadi": "https://github.com/raminmohammadi/MLOps/"},
     max_active_runs=1,
 )
 
-# ---------- DAG Tasks ----------
+# ---------- Tasks ----------
 owner_task = BashOperator(
     task_id="task_using_linked_owner",
     bash_command="echo 1",
-    owner="Murtaza Nipplewala",
+    owner="Ramin Mohammadi",
     dag=dag,
 )
 
@@ -102,7 +103,7 @@ trigger_dag_task = TriggerDagRunOperator(
     dag=dag,
 )
 
-# ---------- DAG Dependencies ----------
+# ---------- Dependencies ----------
 owner_task >> load_data_task >> data_preprocessing_task >> \
     separate_data_outputs_task >> build_save_model_task >> \
     load_model_task >> trigger_dag_task

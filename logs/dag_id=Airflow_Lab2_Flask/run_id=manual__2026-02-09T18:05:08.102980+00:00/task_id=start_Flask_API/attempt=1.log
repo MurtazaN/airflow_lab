@@ -1,0 +1,8 @@
+{"timestamp":"2026-02-09T18:05:22.746973Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-09T18:05:22.747587Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/Flask_API.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-09T18:05:22.770412Z","level":"info","event":"Starting Flask on 0.0.0.0:5555 ...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T18:05:22.774341Z","level":"info","event":" * Serving Flask app 'unusual_prefix_fb1fa9258fa1ad786b4829a3672e98fa2e7542a0_Flask_API'","logger":"task.stdout"}
+{"timestamp":"2026-02-09T18:05:22.774577Z","level":"info","event":" * Debug mode: off","logger":"task.stdout"}
+{"timestamp":"2026-02-09T18:05:22.774726Z","level":"error","event":"Address already in use","logger":"task.stderr"}
+{"timestamp":"2026-02-09T18:05:22.774803Z","level":"error","event":"Port 5555 is in use by another program. Either identify and stop that program, or start the server with a different port.","logger":"task.stderr"}
+{"timestamp":"2026-02-09T18:05:22.774643Z","level":"error","event":"Task exited","exit_code":1,"logger":"task","filename":"task_runner.py","lineno":1138}

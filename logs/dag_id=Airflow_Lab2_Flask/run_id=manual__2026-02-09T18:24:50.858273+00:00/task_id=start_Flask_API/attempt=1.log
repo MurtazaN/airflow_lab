@@ -1,0 +1,21 @@
+{"timestamp":"2026-02-09T18:24:51.557458Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-02-09T18:24:51.558037Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/Flask_API.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-09T18:24:51.589305Z","level":"info","event":"Starting Flask on 0.0.0.0:5555 ...","logger":"task.stdout"}
+{"timestamp":"2026-02-09T18:24:51.600179Z","level":"info","event":" * Serving Flask app 'unusual_prefix_fb1fa9258fa1ad786b4829a3672e98fa2e7542a0_Flask_API'","logger":"task.stdout"}
+{"timestamp":"2026-02-09T18:24:51.600434Z","level":"info","event":" * Debug mode: off","logger":"task.stdout"}
+{"timestamp":"2026-02-09T18:24:51.600906Z","level":"info","event":"\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m\n * Running on all addresses (0.0.0.0)\n * Running on http://127.0.0.1:5555\n * Running on http://172.18.0.8:5555","logger":"werkzeug","filename":"_internal.py","lineno":224}
+{"timestamp":"2026-02-09T18:24:51.601346Z","level":"info","event":"\u001b[33mPress CTRL+C to quit\u001b[0m","logger":"werkzeug","filename":"_internal.py","lineno":224}
+{"timestamp":"2026-02-09T18:25:18.223346Z","level":"info","event":"192.168.65.1 - - [09/Feb/2026 18:25:18] \"\u001b[32mGET / HTTP/1.1\u001b[0m\" 302 -","logger":"werkzeug","filename":"_internal.py","lineno":224}
+{"timestamp":"2026-02-09T18:25:18.231420Z","level":"info","event":"192.168.65.1 - - [09/Feb/2026 18:25:18] \"GET /failure HTTP/1.1\" 200 -","logger":"werkzeug","filename":"_internal.py","lineno":224}
+{"timestamp":"2026-02-09T18:25:55.497416Z","level":"info","event":"192.168.65.1 - - [09/Feb/2026 18:25:55] \"GET /success HTTP/1.1\" 200 -","logger":"werkzeug","filename":"_internal.py","lineno":224}
+{"timestamp":"2026-02-09T18:26:03.111604Z","level":"info","event":"192.168.65.1 - - [09/Feb/2026 18:26:03] \"\u001b[32mGET / HTTP/1.1\u001b[0m\" 302 -","logger":"werkzeug","filename":"_internal.py","lineno":224}
+{"timestamp":"2026-02-09T18:26:03.118174Z","level":"info","event":"192.168.65.1 - - [09/Feb/2026 18:26:03] \"GET /failure HTTP/1.1\" 200 -","logger":"werkzeug","filename":"_internal.py","lineno":224}
+{"timestamp":"2026-02-09T18:26:34.809028Z","level":"info","event":"192.168.65.1 - - [09/Feb/2026 18:26:34] \"\u001b[33mGET /docs HTTP/1.1\u001b[0m\" 404 -","logger":"werkzeug","filename":"_internal.py","lineno":224}
+{"timestamp":"2026-02-09T18:26:40.504174Z","level":"info","event":"192.168.65.1 - - [09/Feb/2026 18:26:40] \"GET /health HTTP/1.1\" 200 -","logger":"werkzeug","filename":"_internal.py","lineno":224}
+{"timestamp":"2026-02-09T18:26:44.586039Z","level":"info","event":"192.168.65.1 - - [09/Feb/2026 18:26:44] \"\u001b[32mGET / HTTP/1.1\u001b[0m\" 302 -","logger":"werkzeug","filename":"_internal.py","lineno":224}
+{"timestamp":"2026-02-09T18:26:44.591581Z","level":"info","event":"192.168.65.1 - - [09/Feb/2026 18:26:44] \"GET /failure HTTP/1.1\" 200 -","logger":"werkzeug","filename":"_internal.py","lineno":224}
+{"timestamp":"2026-02-09T18:26:49.153488Z","level":"info","event":"192.168.65.1 - - [09/Feb/2026 18:26:49] \"\u001b[33mGET /help HTTP/1.1\u001b[0m\" 404 -","logger":"werkzeug","filename":"_internal.py","lineno":224}
+{"timestamp":"2026-02-09T18:27:02.769978Z","level":"info","event":"192.168.65.1 - - [09/Feb/2026 18:27:02] \"\u001b[33mGET /index HTTP/1.1\u001b[0m\" 404 -","logger":"werkzeug","filename":"_internal.py","lineno":224}
+{"timestamp":"2026-02-09T18:27:05.466956Z","level":"info","event":"192.168.65.1 - - [09/Feb/2026 18:27:05] \"\u001b[33mGET /index HTTP/1.1\u001b[0m\" 404 -","logger":"werkzeug","filename":"_internal.py","lineno":224}
+{"timestamp":"2026-02-09T18:27:13.490821Z","level":"info","event":"192.168.65.1 - - [09/Feb/2026 18:27:13] \"\u001b[32mGET / HTTP/1.1\u001b[0m\" 302 -","logger":"werkzeug","filename":"_internal.py","lineno":224}
+{"timestamp":"2026-02-09T18:27:13.500732Z","level":"info","event":"192.168.65.1 - - [09/Feb/2026 18:27:13] \"GET /failure HTTP/1.1\" 200 -","logger":"werkzeug","filename":"_internal.py","lineno":224}

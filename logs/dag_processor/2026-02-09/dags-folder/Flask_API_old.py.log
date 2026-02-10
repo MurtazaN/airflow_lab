@@ -1,0 +1,11 @@
+{"timestamp":"2026-02-09T18:36:45.907624Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/Flask_API_old.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-09T18:37:16.380753Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/Flask_API_old.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-09T18:37:46.977186Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/Flask_API_old.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-09T18:38:17.558588Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/Flask_API_old.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-09T18:38:47.948558Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/Flask_API_old.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-09T18:39:18.227842Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/Flask_API_old.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-09T18:39:48.286992Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/Flask_API_old.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-09T18:40:18.420641Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/Flask_API_old.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-09T18:40:48.503395Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/Flask_API_old.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-09T18:41:18.586530Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/Flask_API_old.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-02-09T18:41:48.856733Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/Flask_API_old.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
