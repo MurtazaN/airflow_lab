@@ -34,7 +34,7 @@ dag = DAG(
     schedule="@daily",
     catchup=False,
     tags=["example"],
-    owner_links={"Ramin Mohammadi": "https://github.com/raminmohammadi/MLOps/"},
+    owner_links={"Murtaza Nipplewala": "https://github.com/MurtazaN/airflow_lab.git"},
     max_active_runs=1,
 )
 
@@ -42,7 +42,7 @@ dag = DAG(
 owner_task = BashOperator(
     task_id="task_using_linked_owner",
     bash_command="echo 1",
-    owner="Ramin Mohammadi",
+    owner="Murtaza Nipplewala",
     dag=dag,
 )
 
@@ -105,7 +105,6 @@ trigger_dag_task = TriggerDagRunOperator(
 # changing threshold to 99% should trigger the failure email instead of the trigger task
 ACCURACY_THRESHOLD = 0.99  # 80% - change this as needed
 
-# Minimal Airflow-specific function: only reads XCom, delegates logic to model_development.py
 def decide_next_task(**context):
     """Read accuracy from XCom, use check_accuracy_threshold to decide."""
     accuracy = context['ti'].xcom_pull(task_ids='evaluate_model_task')
