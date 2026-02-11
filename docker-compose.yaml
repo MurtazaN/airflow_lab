@@ -65,8 +65,8 @@ x-airflow-common:
     AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
     AIRFLOW__CORE__EXECUTION_API_SERVER_URL: 'http://airflow-apiserver:8080/execution/'
     
-    # SMTP connection for EmailOperator (JSON format) or in config file
-    AIRFLOW_CONN_SMTP_DEFAULT: '{"conn_type": "smtp", "host": "smtp.gmail.com", "port": 587, "login": "murtaza.sn786@gmail.com", "password": "qlepvngvfmggzlkz", "extra": {"from_email": "murtaza.sn786@gmail.com", "disable_ssl": true, "disable_tls": false}}'
+    # SMTP connection for EmailOperator - uses variables from .env file
+    AIRFLOW_CONN_SMTP_DEFAULT: '{"conn_type": "smtp", "host": "smtp.gmail.com", "port": 587, "login": "${SMTP_USER}", "password": "${SMTP_PASSWORD}", "extra": {"from_email": "${SMTP_USER}", "disable_ssl": true, "disable_tls": false}}'
     
     # yamllint disable rule:line-length
     # Use simple http server on scheduler for health checks
