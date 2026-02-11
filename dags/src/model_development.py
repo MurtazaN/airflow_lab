@@ -107,3 +107,51 @@ def load_model(file_path: str, filename: str) -> int:
 
     pred = model.predict(X_test)
     return int(pred[0])
+
+
+def get_model_accuracy(file_path: str, filename: str) -> float:
+    """
+    Calculate and return the model's accuracy on test data.
+        
+    Args:
+        file_path: Path to the pickle file containing (X_train, X_test, y_train, y_test)
+        filename: Name of the saved model file (e.g., "model.sav")
+    
+    Returns:
+        float: Accuracy score between 0.0 (0% correct) and 1.0 (100% correct)
+    """
+    # Load the test data
+    with open(file_path, "rb") as f:
+        X_train, X_test, y_train, y_test = pickle.load(f)
+
+    # Load the trained model
+    model_path = os.path.join(MODEL_DIR, filename)
+    with open(model_path, "rb") as f:
+        model = pickle.load(f)
+
+    # Calculate accuracy: percentage of correct predictions
+    accuracy = model.score(X_test, y_test)
+    print(f"Model accuracy: {accuracy:.2%}")  # e.g., "95.00%"
+    
+    return accuracy
+
+
+def check_accuracy_threshold(accuracy: float, threshold: float = 0.8) -> bool:
+    """
+    Check if model accuracy meets the required threshold.
+
+    Args:
+        accuracy: The model's accuracy score (0.0 to 1.0)
+        threshold: Minimum required accuracy (default 0.8 = 80%)
+    
+    Returns:
+        bool: True if accuracy >= threshold, False otherwise
+    """
+    passed = accuracy >= threshold
+    
+    if passed:
+        print(f"✓ Model PASSED: {accuracy:.2%} >= {threshold:.0%}")
+    else:
+        print(f"✗ Model FAILED: {accuracy:.2%} < {threshold:.0%}")
+    
+    return passed
