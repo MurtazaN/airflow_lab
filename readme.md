@@ -70,12 +70,6 @@ _AIRFLOW_WWW_USER_USERNAME: ${_AIRFLOW_WWW_USER_USERNAME:-airflow2}
 _AIRFLOW_WWW_USER_PASSWORD: ${_AIRFLOW_WWW_USER_PASSWORD:-airflow2}
 ```
 
-Initialize the database (this will take a couple of minutes):
-
-```bash
-docker compose up airflow-init
-```
-
 ### 3. Configure Email (Optional)
 
 If you want email notifications to work:
@@ -92,6 +86,13 @@ echo "SMTP_PASSWORD=your-app-password" >> .env
 The `docker-compose.yaml` will automatically read these variables.
 
 ### 4. Start Airflow
+1. Initialize the database (this will take a couple of minutes):
+
+```bash
+docker compose up airflow-init
+```
+
+2. Run Airflow
 
 ```bash
 docker compose up -d
