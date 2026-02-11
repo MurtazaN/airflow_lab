@@ -103,7 +103,7 @@ trigger_dag_task = TriggerDagRunOperator(
 
 # model accuracy is 97%
 # changing threshold to 99% should trigger the failure email instead of the trigger task
-ACCURACY_THRESHOLD = 0.99  # 80% - change this as needed
+ACCURACY_THRESHOLD = 0.90
 
 def decide_next_task(**context):
     """Read accuracy from XCom, use check_accuracy_threshold to decide."""
