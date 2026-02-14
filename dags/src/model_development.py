@@ -4,6 +4,7 @@ import pickle
 import pandas as pd
 from sklearn.compose import make_column_transformer
 from sklearn.linear_model import LogisticRegression
+from sklearn.ensemble import RandomForestClassifier  # NEW: for model comparison
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import MinMaxScaler, StandardScaler
 
@@ -108,6 +109,7 @@ def load_model(file_path: str, filename: str) -> int:
     pred = model.predict(X_test)
     return int(pred[0])
 
+# NEW
 
 def get_model_accuracy(file_path: str, filename: str) -> float:
     """
@@ -153,5 +155,140 @@ def check_accuracy_threshold(accuracy: float, threshold: float = 0.8) -> bool:
         print(f"✓ Model PASSED: {accuracy:.2%} >= {threshold:.0%}")
     else:
         print(f"✗ Model FAILED: {accuracy:.2%} < {threshold:.0%}")
+    
+    return passed
+
+
+# NEW
+# These functions allow training different models in parallel and comparing them.
+
+def train_logistic_regression(file_path: str) -> dict:
+    """
+    Train a Logistic Regression model and return its accuracy.
+    
+    This function is designed to run as a SEPARATE Airflow task,
+    allowing it to run in PARALLEL with other model training tasks.
+    
+    Args:
+        file_path: Path to preprocessed data pickle file
+    
+    Returns:
+        dict: Contains model_name, accuracy, and model_path
+              (dict is returned so we can pass multiple values via XCom)
+    """
+    # Load the preprocessed data
+    with open(file_path, "rb") as f:
+        X_train, X_test, y_train, y_test = pickle.load(f)
+    
+    # Create and train the model
+    model = LogisticRegression()
+    model.fit(X_train, y_train)
+    
+    # Calculate accuracy
+    accuracy = model.score(X_test, y_test)
+    print(f"Logistic Regression accuracy: {accuracy:.2%}")
+    
+    # Save the model to disk
+    model_path = os.path.join(MODEL_DIR, "logistic_regression.sav")
+    with open(model_path, "wb") as f:
+        pickle.dump(model, f)
+    
+    # Return a dictionary (Airflow will save this entire dict to XCom)
+    return {
+        'model_name': 'logistic_regression',
+        'accuracy': accuracy,
+        'model_path': model_path
+    }
+
+
+def train_random_forest(file_path: str) -> dict:
+    """
+    Train a Random Forest model and return its accuracy.
+    
+    Random Forest is an "ensemble" method — it trains many decision trees
+    and combines their predictions. Often more accurate than simple models.
+    
+    Args:
+        file_path: Path to preprocessed data pickle file
+    
+    Returns:
+        dict: Contains model_name, accuracy, and model_path
+    """
+    with open(file_path, "rb") as f:
+        X_train, X_test, y_train, y_test = pickle.load(f)
+    
+    # n_estimators = number of trees in the forest
+    # More trees = potentially more accurate, but slower to train
+    model = RandomForestClassifier(n_estimators=100, random_state=42)
+    model.fit(X_train, y_train)
+    
+    accuracy = model.score(X_test, y_test)
+    print(f"Random Forest accuracy: {accuracy:.2%}")
+    
+    model_path = os.path.join(MODEL_DIR, "random_forest.sav")
+    with open(model_path, "wb") as f:
+        pickle.dump(model, f)
+    
+    return {
+        'model_name': 'random_forest',
+        'accuracy': accuracy,
+        'model_path': model_path
+    }
+
+
+def compare_models(logistic_result: dict, rf_result: dict) -> dict:
+    """
+    Compare two models and select the best one.
+    
+    This function receives results from BOTH training tasks.
+    It compares their accuracies and returns info about the winner.
+    
+    Args:
+        logistic_result: Dict from train_logistic_regression (via XCom)
+        rf_result: Dict from train_random_forest (via XCom)
+    
+    Returns:
+        dict: Info about the best model
+    """
+    
+    # Compare and pick the winner
+    if logistic_result['accuracy'] >= rf_result['accuracy']:
+        winner = logistic_result
+    else:
+        winner = rf_result
+
+    # Copy the winning model to "best_model.sav" for easy access
+    best_model_path = os.path.join(MODEL_DIR, "best_model.sav")
+    with open(winner['model_path'], "rb") as src:
+        model = pickle.load(src)
+    with open(best_model_path, "wb") as dst:
+        pickle.dump(model, dst)
+    
+    return {
+        'best_model_name': winner['model_name'],
+        'best_accuracy': winner['accuracy'],
+        'best_model_path': best_model_path
+    }
+
+
+def check_best_model_threshold(comparison_result: dict, threshold: float = 0.8) -> bool:
+    """
+    Check if the BEST model meets the accuracy threshold.
+    
+    Args:
+        comparison_result: Dict returned by compare_models
+        threshold: Minimum required accuracy
+    
+    Returns:
+        bool: True if best model meets threshold
+    """
+    accuracy = comparison_result['best_accuracy']
+    model_name = comparison_result['best_model_name']
+    passed = accuracy >= threshold
+    
+    if passed:
+        print(f"✓ Best model ({model_name}) PASSED: {accuracy:.2%} >= {threshold:.0%}")
+    else:
+        print(f"✗ Best model ({model_name}) FAILED: {accuracy:.2%} < {threshold:.0%}")
     
     return passed

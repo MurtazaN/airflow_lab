@@ -18,6 +18,11 @@ from src.model_development import (
     load_model,
     get_model_accuracy,
     check_accuracy_threshold,
+    # NEW: Functions for parallel model training
+    train_logistic_regression,
+    train_random_forest,
+    compare_models,
+    check_best_model_threshold,
 )
 
 # ---------- Default args ----------
@@ -99,7 +104,7 @@ trigger_dag_task = TriggerDagRunOperator(
     dag=dag,
 )
 
-# ========== NEW: Branching Tasks ==========
+# NEW: Branching Tasks
 
 # model accuracy is 97%
 # changing threshold to 99% should trigger the failure email instead of the trigger task
@@ -138,19 +143,116 @@ model_quality_failed_email = EmailOperator(
     dag=dag,
 )
 
-# ---------- Dependencies ----------
 
-# Original pipeline (unchanged)
+# NEW: Parallel Model Training & Comparison
+
+# Task 1: Train Logistic Regression (runs in parallel with Random Forest)
+train_lr_task = PythonOperator(
+    task_id="train_logistic_regression",
+    python_callable=train_logistic_regression,
+    # Pass the file path from separate_data_outputs_task
+    op_args=[separate_data_outputs_task.output],
+    dag=dag,
+)
+
+# Task 2: Train Random Forest (runs in parallel with Logistic Regression)
+train_rf_task = PythonOperator(
+    task_id="train_random_forest",  
+    python_callable=train_random_forest,
+    op_args=[separate_data_outputs_task.output],
+    dag=dag,
+)
+
+# Task 3: Compare models and pick the best one
+# This task WAITS for both training tasks to complete.
+# It reads their results from XCom using .output
+compare_models_task = PythonOperator(
+    task_id="compare_models",
+    python_callable=compare_models,
+    # op_args passes positional arguments to the function
+    # train_lr_task.output = the dict returned by train_logistic_regression
+    # train_rf_task.output = the dict returned by train_random_forest
+    op_args=[train_lr_task.output, train_rf_task.output],
+    dag=dag,
+)
+
+# Decision function for model comparison branch
+def decide_after_comparison(**context):
+    """
+    After comparing models, decide if the BEST model meets our threshold.
+    
+    This reads the comparison result from XCom and decides:
+    - If best model accuracy >= threshold → proceed to Flask API
+    - If best model accuracy < threshold → send failure email
+    """
+    # Read the comparison result from XCom
+    comparison_result = context['ti'].xcom_pull(task_ids='compare_models')
+    
+    # Use our function to check the threshold
+    if check_best_model_threshold(comparison_result, ACCURACY_THRESHOLD):
+        return 'my_trigger_task'
+    return 'comparison_failed_email'
+
+
+# Branch after model comparison
+branch_after_comparison = BranchPythonOperator(
+    task_id="branch_after_comparison",
+    python_callable=decide_after_comparison,
+    dag=dag,
+)
+
+# Email for when even the best model isn't good enough
+comparison_failed_email = EmailOperator(
+    task_id="comparison_failed_email",
+    to="murtaza.sn786@gmail.com",
+    subject="Best Model Below Threshold",
+    html_content=f"""
+    <h2>Model Comparison Alert</h2>
+    <p>Both models were trained and compared, but even the best model
+    is below the required {ACCURACY_THRESHOLD:.0%} threshold.</p>
+    <p><b>Action Required:</b> Try different models or more data.</p>
+    """,
+    dag=dag,
+)
+
+# ---------- Dependencies ----------
+#
+# ORIGINAL PIPELINE (unchanged - single model)
+# =============================================
+#
+# owner → load_data → preprocess → separate → build_model → load_model
+#                                                               ↓
+#                                                         evaluate_model
+#                                                               ↓
+#                                                       check_model_quality
+#                                                           ↙         ↘
+#                                                   trigger_task    failed_email
+#
 owner_task >> load_data_task >> data_preprocessing_task >> \
     separate_data_outputs_task >> build_save_model_task >> \
     load_model_task
 
-# Optional: email after model loads (independent branch)
-# load_model_task >> send_email
-
-# NEW: Branching after load_model_task
-# load_model_task → evaluate → check_quality → trigger_task (if passed)
-#                                              → failed_email (if failed)
+# Branching after single model evaluation
 load_model_task >> evaluate_model_task >> branch_on_quality
 branch_on_quality >> trigger_dag_task
 branch_on_quality >> model_quality_failed_email
+
+
+#
+#                                        ↗ train_logistic_regression ↘
+# owner → load_data → preprocess → separate                            → compare_models → branch
+#                                        ↘ train_random_forest       ↗           ↙         ↘
+#                                                                        trigger_task  comparison_failed_email
+#
+#
+
+# Fork: After separate_data, run BOTH training tasks in parallel
+separate_data_outputs_task >> [train_lr_task, train_rf_task]
+
+# Join: compare_models waits for BOTH training tasks to complete
+[train_lr_task, train_rf_task] >> compare_models_task
+
+# After comparison, branch based on best model's accuracy
+compare_models_task >> branch_after_comparison
+branch_after_comparison >> trigger_dag_task
+branch_after_comparison >> comparison_failed_email
